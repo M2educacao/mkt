@@ -79,6 +79,8 @@
   <div class="tab" onclick="showTab('s3')">S3 · 18–24/04</div>
   <div class="tab" onclick="showTab('s4')">S4 · 25–30/04</div>
   <div class="tab" onclick="showTab('comp')">Compilado</div>
+  <div class="tab" onclick="showTab('hist')">Histórico</div>
+  <div class="tab" onclick="showTab('maio')">Plano Maio</div>
 </div>
 
 <!-- S1 -->
@@ -89,7 +91,7 @@
     <div class="mc"><div class="ml">Investimento</div><div class="mv">R$6,8k</div><div class="ms">R$6.816,07</div></div>
     <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$85</div></div>
     <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">2</div><div class="ms">3 brutas – 1 cancel.</div></div>
-    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">7,9x</div><div class="ms"><span class="badge badge-ok">ROI 692%</span></div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">7,6x</div><div class="ms"><span class="badge badge-ok">ROI 663%</span></div></div>
   </div>
   <div class="mg5">
     <div class="mc"><div class="ml">Contatados</div><div class="mv">68</div><div class="ms"><span class="badge badge-warn">85% leads</span></div></div>
@@ -97,6 +99,11 @@
     <div class="mc"><div class="ml">Agendaram</div><div class="mv">9</div><div class="ms"><span class="badge badge-warn">11% leads</span></div></div>
     <div class="mc"><div class="ml">Compareceram</div><div class="mv">2</div><div class="ms"><span class="badge badge-bad">22% agend.</span></div></div>
     <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$54k</div></div>
+  </div>
+  <div class="mg3">
+    <div class="mc"><div class="ml">CAC · funil mkt</div><div class="mv">R$3.408</div><div class="ms">R$6,8k / 2 vendas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. agendada</div><div class="mv">R$195</div><div class="ms">R$6,8k / 35 1ªs agendadas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. realizada</div><div class="mv">R$341</div><div class="ms">R$6,8k / 20 1ªs realizadas</div></div>
   </div>
   <hr class="d">
   <div class="sl">Funil por canal</div>
@@ -164,6 +171,11 @@
     <div class="mc"><div class="ml">Compareceram</div><div class="mv">10</div><div class="ms"><span class="badge badge-ok">53% agend.</span></div></div>
     <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$108k</div></div>
   </div>
+  <div class="mg3">
+    <div class="mc"><div class="ml">CAC · funil mkt</div><div class="mv">R$4.304</div><div class="ms">R$17,2k / 4 vendas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. agendada</div><div class="mv">R$615</div><div class="ms">R$17,2k / 28 1ªs agendadas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. realizada</div><div class="mv">R$957</div><div class="ms">R$17,2k / 18 1ªs realizadas</div></div>
+  </div>
   <hr class="d">
   <div class="sl">Funil por canal</div>
   <div class="two">
@@ -230,7 +242,7 @@
     <div class="mc"><div class="ml">Investimento</div><div class="mv">R$15,5k</div><div class="ms"><span class="dg">↓-10%</span></div></div>
     <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$64</div><div class="ms"><span class="dg">↓-16%</span></div></div>
     <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">2</div><div class="ms"><span class="ub">↓-2</span></div></div>
-    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">3,5x</div><div class="ms"><span class="badge badge-warn">ROI 248%</span></div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">5,2x</div><div class="ms"><span class="badge badge-warn">ROI 421%</span></div></div>
   </div>
   <div class="mg5">
     <div class="mc"><div class="ml">Contatados</div><div class="mv">99</div><div class="ms"><span class="badge badge-warn">41% leads</span></div></div>
@@ -238,6 +250,11 @@
     <div class="mc"><div class="ml">Agendaram</div><div class="mv">29</div><div class="ms"><span class="badge badge-ok">12% leads</span></div></div>
     <div class="mc"><div class="ml">Compareceram</div><div class="mv">18</div><div class="ms"><span class="badge badge-ok">62% agend.</span></div></div>
     <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$54k</div></div>
+  </div>
+  <div class="mg3">
+    <div class="mc"><div class="ml">CAC · funil mkt</div><div class="mv">R$5.178</div><div class="ms">R$15,5k / 3 vendas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. agendada</div><div class="mv">R$420</div><div class="ms">R$15,5k / 37 1ªs agendadas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. realizada</div><div class="mv">R$555</div><div class="ms">R$15,5k / 28 1ªs realizadas</div></div>
   </div>
   <hr class="d">
   <div class="sl">Funil por canal</div>
@@ -301,18 +318,23 @@
 <div class="pane" id="pane-s4">
   <div class="sl">Visão geral · S4</div>
   <div class="mg5">
-    <div class="mc"><div class="ml">Leads</div><div class="mv">55</div><div class="ms"><span class="ub">↓-77% vs S3</span> <span class="nn">sem lançamento</span></div></div>
-    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$4,9k</div><div class="ms"><span class="dg">↓-68% vs S3</span></div></div>
-    <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$90</div><div class="ms"><span class="ub">↑+41% vs S3</span></div></div>
-    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">1</div><div class="ms">Form. Meta</div></div>
-    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">5,5x</div><div class="ms"><span class="badge badge-ok">ROI 447%</span></div></div>
+    <div class="mc"><div class="ml">Leads</div><div class="mv">88</div><div class="ms"><span class="badge badge-info">55 pagos + 33 Indicações</span></div></div>
+    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$4,9k</div><div class="ms">Indicações: R$0</div></div>
+    <div class="mc"><div class="ml">CPL leads pagos</div><div class="mv">R$90</div><div class="ms">↑+41% vs S3</div></div>
+    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">4</div><div class="ms">3 Mentoria + 1 SMP</div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">10,8x</div><div class="ms"><span class="badge badge-ok">ROI 977%</span></div></div>
   </div>
   <div class="mg5">
-    <div class="mc"><div class="ml">Contatados</div><div class="mv">150</div><div class="ms"><span class="badge badge-info">+100 leads antigos</span></div></div>
-    <div class="mc"><div class="ml">Retornaram</div><div class="mv">12</div><div class="ms"><span class="badge badge-bad">8% contatos</span></div></div>
-    <div class="mc"><div class="ml">Agendaram</div><div class="mv">9</div><div class="ms"><span class="badge badge-ok">16% leads</span></div></div>
+    <div class="mc"><div class="ml">Contatados</div><div class="mv">178</div><div class="ms"><span class="badge badge-info">+100 antigos · +28 indicações</span></div></div>
+    <div class="mc"><div class="ml">Retornaram</div><div class="mv">16</div><div class="ms"><span class="badge badge-bad">9% contatos</span></div></div>
+    <div class="mc"><div class="ml">Agendaram</div><div class="mv">9</div><div class="ms"><span class="badge badge-ok">10% leads</span></div></div>
     <div class="mc"><div class="ml">Compareceram</div><div class="mv">3</div><div class="ms"><span class="badge badge-bad">33% agend.</span></div></div>
-    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$27k</div><div class="ms">1 × R$27k</div></div>
+    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$53k</div><div class="ms">funil mkt</div></div>
+  </div>
+  <div class="mg3">
+    <div class="mc"><div class="ml">CAC · funil mkt</div><div class="mv">R$2.471</div><div class="ms">R$4,9k / 2 vendas (Aplic. + Form Meta)</div></div>
+    <div class="mc"><div class="ml">Custo / reun. agendada</div><div class="mv">R$291</div><div class="ms">R$4,9k / 17 1ªs agendadas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. realizada</div><div class="mv">R$449</div><div class="ms">R$4,9k / 11 1ªs realizadas</div></div>
   </div>
   <hr class="d">
   <div class="sl">Funil por canal</div>
@@ -356,6 +378,17 @@
       <div class="cf"><span>CPL: <strong>R$293,85</strong></span><span>CP/Agend.: <strong>R$881,56</strong></span></div>
     </div>
   </div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#0F766E;">Indicações · 33 leads · R$0 <span style="background:#CCFBF1;color:#0F766E;font-size:10px;padding:2px 8px;border-radius:10px;margin-left:6px;">novo · piloto</span></div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#1D9E75;">33</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:85%;background:#1D9E75;">28</div></div><div class="fp">85%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:12%;background:#0F6E56;min-width:22px;">4</div></div><div class="fp">12%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:0%;background:#085041;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#04342C;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#04342C;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$0</strong></span><span style="color:var(--text3);">aguarda retorno do Luiz</span></div>
+    </div>
+  </div>
   <hr class="d">
   <div class="sl">Insights</div>
   <div class="ins"><div class="dot dot-info"></div><div><strong>+100 leads antigos do Lançamento contatados na S4:</strong> leads que chegaram em S2/S3 mas não tinham sido abordados. Nenhum retornou ou agendou — sinal de que leads de Lançamento esfriam rápido sem contato imediato.</div></div>
@@ -369,18 +402,23 @@
 <div class="pane" id="pane-comp">
   <div class="sl">Acumulado S1+S2+S3+S4</div>
   <div class="mg5">
-    <div class="mc"><div class="ml">Total de leads</div><div class="mv">603</div><div class="ms">S1:80·S2:225·S3:243·S4:55</div></div>
-    <div class="mc"><div class="ml">Investimento total</div><div class="mv">R$44,5k</div><div class="ms">R$44.510,05</div></div>
-    <div class="mc"><div class="ml">CPL médio acum.</div><div class="mv">R$74</div><div class="ms">↓ S1:R$85→S4:R$90</div></div>
+    <div class="mc"><div class="ml">Total de leads</div><div class="mv">636</div><div class="ms">603 pagos + 33 Indicações</div></div>
+    <div class="mc"><div class="ml">Investimento total</div><div class="mv">R$44,5k</div><div class="ms">Indicações custo zero</div></div>
+    <div class="mc"><div class="ml">CPL médio acum.</div><div class="mv">R$74</div><div class="ms">só leads pagos</div></div>
     <div class="mc"><div class="ml">Vendas líquidas</div><div class="mv">12</div><div class="ms">10 atribuíveis ao funil mkt + 2 fora <span style="color:var(--text3);font-size:10px;">(Drosendo, Marcus SMP)</span></div></div>
     <div class="mc"><div class="ml">ROAS acum.</div><div class="mv">6,6x</div><div class="ms"><span class="badge badge-ok">ROI 561%</span></div></div>
   </div>
   <div class="mg5">
-    <div class="mc"><div class="ml">Contatados total</div><div class="mv">427</div><div class="ms">71% dos leads · +100 leads antigos S4</div></div>
-    <div class="mc"><div class="ml">Retornaram total</div><div class="mv">107</div><div class="ms">25% dos contatos</div></div>
-    <div class="mc"><div class="ml">Agendaram total</div><div class="mv">66</div><div class="ms">11% dos leads</div></div>
+    <div class="mc"><div class="ml">Contatados total</div><div class="mv">455</div><div class="ms">71% dos leads · +100 antigos · +28 indicações</div></div>
+    <div class="mc"><div class="ml">Retornaram total</div><div class="mv">111</div><div class="ms">24% dos contatos</div></div>
+    <div class="mc"><div class="ml">Agendaram total</div><div class="mv">66</div><div class="ms">10% dos leads</div></div>
     <div class="mc"><div class="ml">Compareceram total</div><div class="mv">33</div><div class="ms">50% dos agend.</div></div>
     <div class="mc"><div class="ml">Faturamento líq.</div><div class="mv">R$294k</div><div class="ms">funil mkt · sem Drosendo/SMP</div></div>
+  </div>
+  <div class="mg3">
+    <div class="mc"><div class="ml">CAC · funil mkt</div><div class="mv">R$4.046</div><div class="ms">R$44,5k investido / 11 vendas Mentoria do funil</div></div>
+    <div class="mc"><div class="ml">Custo / reun. agendada</div><div class="mv">R$380</div><div class="ms">R$44,5k / 117 1ªs reuniões agendadas</div></div>
+    <div class="mc"><div class="ml">Custo / reun. realizada</div><div class="mv">R$578</div><div class="ms">R$44,5k / 77 1ªs reuniões realizadas</div></div>
   </div>
 
   <hr class="d">
@@ -390,14 +428,17 @@
     <div class="cr"><div class="cl">Investimento</div><div class="cv s1">R$6.816</div><div class="cv s2">R$17.218</div><div class="cv s3">R$15.534</div><div class="cv s4">R$4.942</div><div class="cd ddg">-68%</div></div>
     <div class="cr"><div class="cl">Leads recebidos</div><div class="cv s1">80</div><div class="cv s2">225</div><div class="cv s3">243</div><div class="cv s4">55</div><div class="cd dub">-77%</div></div>
     <div class="cr"><div class="cl">CPL médio</div><div class="cv s1">R$85</div><div class="cv s2">R$76</div><div class="cv s3">R$64</div><div class="cv s4">R$90</div><div class="cd dub">+41%</div></div>
+    <div class="cr"><div class="cl">Custo/reun. agendada</div><div class="cv s1">R$195</div><div class="cv s2">R$615</div><div class="cv s3">R$420</div><div class="cv s4">R$291</div><div class="cd ddg">-31%</div></div>
+    <div class="cr"><div class="cl">Custo/reun. realizada</div><div class="cv s1">R$341</div><div class="cv s2">R$957</div><div class="cv s3">R$555</div><div class="cv s4">R$449</div><div class="cd ddg">-19%</div></div>
+    <div class="cr"><div class="cl">CAC funil mkt</div><div class="cv s1">R$3.408</div><div class="cv s2">R$4.304</div><div class="cv s3">R$5.178</div><div class="cv s4">R$2.471</div><div class="cd ddg">-52%</div></div>
     <div class="cr"><div class="cl">Contatados</div><div class="cv s1">68</div><div class="cv s2">110</div><div class="cv s3">99</div><div class="cv s4">150</div><div class="cd dug">+51</div></div>
     <div class="cr"><div class="cl">% retorno/contato</div><div class="cv s1">24%</div><div class="cv s2">39%</div><div class="cv s3">36%</div><div class="cv s4">8%</div><div class="cd dub">-28pp</div></div>
     <div class="cr"><div class="cl">% agendamento/lead</div><div class="cv s1">11%</div><div class="cv s2">8%</div><div class="cv s3">12%</div><div class="cv s4">16%</div><div class="cd dug">+4pp</div></div>
     <div class="cr"><div class="cl">% comparecimento</div><div class="cv s1">22%</div><div class="cv s2">53%</div><div class="cv s3">62%</div><div class="cv s4">33%</div><div class="cd dub">-29pp</div></div>
     <div class="cr"><div class="cl">Vendas líq. (funil mkt)</div><div class="cv s1">2</div><div class="cv s2">4</div><div class="cv s3">3</div><div class="cv s4">2</div><div class="cd dub">-1</div></div>
-    <div class="cr"><div class="cl">Faturamento</div><div class="cv s1">R$54k</div><div class="cv s2">R$108k</div><div class="cv s3">R$54k</div><div class="cv s4">R$27k</div><div class="cd dub">-50%</div></div>
-    <div class="cr"><div class="cl">ROAS</div><div class="cv s1">7,9x</div><div class="cv s2">6,3x</div><div class="cv s3">3,5x</div><div class="cv s4">5,5x</div><div class="cd dug">+2x</div></div>
-    <div class="cr"><div class="cl">ROI</div><div class="cv s1">692%</div><div class="cv s2">527%</div><div class="cv s3">248%</div><div class="cv s4">447%</div><div class="cd dug">+199pp</div></div>
+    <div class="cr"><div class="cl">Faturamento (funil mkt)</div><div class="cv s1">R$52k</div><div class="cv s2">R$108k</div><div class="cv s3">R$81k</div><div class="cv s4">R$53k</div><div class="cd dub">-34%</div></div>
+    <div class="cr"><div class="cl">ROAS</div><div class="cv s1">7,6x</div><div class="cv s2">6,3x</div><div class="cv s3">5,2x</div><div class="cv s4">10,8x</div><div class="cd dug">+5,6x</div></div>
+    <div class="cr"><div class="cl">ROI</div><div class="cv s1">663%</div><div class="cv s2">527%</div><div class="cv s3">421%</div><div class="cv s4">977%</div><div class="cd dug">+556pp</div></div>
   </div>
 
   <hr class="d">
@@ -409,8 +450,8 @@
       <div class="cw" style="height:180px;"><canvas id="cInvLeads"></canvas></div>
     </div>
     <div class="card">
-      <div class="ct">CPL médio (R$) por semana</div>
-      <div class="leg"><div class="li"><div class="ls" style="background:#D97706;"></div>CPL</div></div>
+      <div class="ct">Custos por etapa do funil (R$)</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#D97706;"></div>CPL</div><div class="li"><div class="ls" style="background:#B45309;"></div>Custo/reun. realizada</div><div class="li"><div class="ls" style="background:#DC2626;"></div>CAC</div></div>
       <div class="cw" style="height:180px;"><canvas id="cCPL"></canvas></div>
     </div>
   </div>
@@ -421,8 +462,8 @@
       <div class="cw" style="height:180px;"><canvas id="cPcts"></canvas></div>
     </div>
     <div class="card">
-      <div class="ct">Vendas líquidas e ROAS</div>
-      <div class="leg"><div class="li"><div class="ls" style="background:#7C3AED;"></div>Vendas</div><div class="li"><div class="ls" style="background:#DC2626;"></div>ROAS</div></div>
+      <div class="ct">ROAS e taxa de conversão do funil</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#DC2626;"></div>ROAS</div><div class="li"><div class="ls" style="background:#7C3AED;"></div>Tx conv. lead→venda %</div></div>
       <div class="cw" style="height:180px;"><canvas id="cROAS"></canvas></div>
     </div>
   </div>
@@ -496,18 +537,283 @@
   </div>
 
   <hr class="d">
-  <div class="sl">Insights consolidados</div>
+  <div class="sl">Análise · diagnóstico de abril</div>
   <div class="ins"><div class="dot dot-ok"></div><div><strong>Formulário Meta é o canal mais consistente do mês:</strong> CPL caindo semana a semana (R$22→R$37→R$29→R$24) e a única venda na S4. Melhor custo e maior volume entre os canais recorrentes.</div></div>
-  <div class="ins"><div class="dot dot-ok"></div><div><strong>Lançamento e Aplicação direta empatados como maiores canais (3 vendas cada):</strong> Lançamento concentrado em S2-S3, Aplicação distribuída ao longo do mês.</div></div>
-  <div class="ins"><div class="dot dot-warn"></div><div><strong>100 leads do Lançamento contatados tardiamente na S4:</strong> nenhum retornou. Lead de Lançamento esfria rápido — janela de contato eficaz parece ser de poucos dias após captura.</div></div>
-  <div class="ins"><div class="dot dot-warn"></div><div><strong>Comparecimento caiu na S4 (33%):</strong> interrompeu a tendência de alta (22%→53%→62%). Sem Lançamento, o volume menor pode ter afetado a qualidade do pipeline.</div></div>
-  <div class="ins"><div class="dot dot-info"></div><div><strong>2 vendas fora do funil de marketing:</strong> Drosendo (R$25k, lead antigo procurando o closer) e Marcus (R$6,8k, produto SMP). Sinais positivos de relacionamento e diversificação de oferta — não computados no ROAS.</div></div>
-  <div class="ins"><div class="dot dot-ok"></div><div><strong>ROAS acumulado em 6,6x e ROI 561%:</strong> R$ 294k de faturamento atribuível ao funil sobre R$ 44,5k de investimento. Resultado sólido apesar da queda de S2 (6,3x) → S3 (3,5x). A retomada do Lançamento em maio pode reverter.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Check-up entrou em fase de maturidade:</strong> volume crescendo S1→S3 (14→26→34 leads), 1 venda em S1 e contatos com retorno saudável. Funil mais previsível da operação.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Aplicação direta perdeu eficiência:</strong> volume escalou mas a conversão caiu. Decisão de desligamento alinhada com a queda de qualidade.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>100 leads do Lançamento contatados tardiamente na S4:</strong> nenhum retornou. Janela de contato eficaz é de poucos dias — caso clássico de "lead esfriado" por falta de SLA de abordagem.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Comparecimento caiu na S4 (33%):</strong> interrompeu a tendência de alta (22%→53%→62%). Combinado com no-show de 35%, sinaliza necessidade de processo de confirmação melhor.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>2 vendas fora do funil de marketing:</strong> Drosendo (R$25k, lead antigo procurando o closer) e Marcus (R$6,8k, produto SMP). Sinais positivos de relacionamento — não computados no ROAS.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>ROAS acumulado em 6,6x e ROI 561%:</strong> R$ 294k de faturamento atribuível ao funil sobre R$ 44,5k de investimento. S4 fechou com ROAS recorde (10,8x) por concentrar 2 vendas em investimento reduzido.</div></div>
 </div>
+
+<!-- HISTÓRICO -->
+<div class="pane" id="pane-hist">
+  <div class="sl">Comparativo histórico · ago/2025 a abr/2026</div>
+  <div style="background:var(--blue-bg);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--blue-text);margin-bottom:16px;">
+    <strong>Fonte:</strong> dados de ago/25 a mar/26 vêm do relatório do consultor (referência de tendência, não consolidado). Abr/26 vem da nossa contagem (canais pagos + indicações), validada com CRM.
+  </div>
+
+  <div class="sl">Vendas por canal · evolução mensal (relatório do consultor)</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="ch"><span>ago</span><span>set</span><span>out</span><span>nov</span><span>dez</span><span>jan</span><span>fev</span><span>mar</span><span>abr</span></div>
+    <div class="cr"><div class="cl">Check-up</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">3</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">3</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-weight:600;color:var(--green-text);font-family:'DM Mono',monospace;">4</div>
+    </div>
+    <div class="cr"><div class="cl">Aplicação Direta</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">5</div>
+    </div>
+    <div class="cr"><div class="cl">Instagram (Social Selling)</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">6</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;font-weight:600;">11</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">6</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">6</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-weight:600;color:var(--red-text);font-family:'DM Mono',monospace;">1</div>
+    </div>
+    <div class="cr"><div class="cl">Bio Instagram</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">2</div>
+    </div>
+    <div class="cr"><div class="cl">CPL (campanhas)</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">5</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;font-weight:600;">17</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">2</div>
+    </div>
+    <div class="cr"><div class="cl">Indicações</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">4</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">—</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">0</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">0</div>
+    </div>
+    <div class="cr" style="border-top:2px solid var(--border);padding-top:10px;"><div class="cl" style="font-weight:600;color:var(--text);">Total mês</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">23</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">14</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">29</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">14</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">13</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">23</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">16</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">10</div>
+      <div style="width:52px;text-align:right;font-weight:700;color:var(--text);font-family:'DM Mono',monospace;">13</div>
+    </div>
+  </div>
+
+  <div class="rg">
+    <div class="rv"><div class="rvv">17,8</div><div class="rvl">vendas/mês média 8m</div></div>
+    <div class="rv"><div class="rvv" style="color:var(--red-text);">13</div><div class="rvl">vendas em abril (-27%)</div></div>
+    <div class="rv"><div class="rvv">29</div><div class="rvl">pico mensal (out/25)</div></div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">Conversão Lead→Venda · canais pagos comparáveis</div>
+  <div style="background:var(--surface2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--text2);margin-bottom:12px;">
+    Para comparar de forma justa, removemos o Instagram orgânico das duas pontas (era ~70% dos leads totais mas não está no nosso recorte de canais pagos).
+  </div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="ch"><span>ago</span><span>set</span><span>out</span><span>nov</span><span>dez</span><span>jan</span><span>fev</span><span>mar</span><span>abr</span></div>
+    <div class="cr"><div class="cl">Leads pagos (sem Insta)</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">668</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">245</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">495</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">627</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">269</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1.035</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">407</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">506</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">603</div>
+    </div>
+    <div class="cr"><div class="cl">Vendas (sem Insta)</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">19</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">8</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">18</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">8</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">9</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">22</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">10</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">8</div>
+      <div style="width:52px;text-align:right;font-weight:600;font-family:'DM Mono',monospace;">12</div>
+    </div>
+    <div class="cr"><div class="cl">Tx L→V (canais pagos)</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2,84%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">3,27%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">3,64%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1,28%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">3,35%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2,13%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">2,46%</div>
+      <div style="width:52px;text-align:right;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;">1,58%</div>
+      <div style="width:52px;text-align:right;font-weight:600;color:var(--red-text);font-family:'DM Mono',monospace;">1,99%</div>
+    </div>
+  </div>
+
+  <div class="rg">
+    <div class="rv"><div class="rvv">2,57%</div><div class="rvl">tx L→V média 8m</div></div>
+    <div class="rv"><div class="rvv" style="color:var(--red-text);">1,99%</div><div class="rvl">abril (-0,6pp)</div></div>
+    <div class="rv"><div class="rvv">3,64%</div><div class="rvl">pico (out/25)</div></div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">Leitura</div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Abril vendeu menos que a média:</strong> 13 vendas vs 17,8/mês de média histórica (-27%). O volume de leads está saudável (603 vs 532 média de canais pagos), mas a conversão caiu.</div></div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Tx L→V dos canais pagos: 1,99% em abril vs 2,57% média</strong> — queda de 0,6pp. Não é por falta de leads, é por gargalo entre lead → reunião → venda.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Check-up tem o melhor mês da série em abril (4 vendas).</strong> Confirma o diagnóstico de canal saudável e justifica decisão de aumentar investimento.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Aplicação Direta também atingiu pico em abril (5 vendas).</strong> Mas a queda de eficiência por lead é o motivo do desligamento — o canal escalou em volume mas perdeu qualidade.</div></div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Social Selling em queda persistente:</strong> 11→6→4 (set→nov) e depois 1→6→2→1 em 2026. Não é pico isolado de baixo: é tendência de 4 meses. Sem responsável em maio o canal vai a zero.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>CPL é volátil mas com pico extraordinário:</strong> jan/26 fez 17 vendas em uma campanha. Quando funciona, é o canal de maior alavanca. CPL 19/05 é a aposta em repetir esse padrão.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Indicações sustenta receita pequena mas constante:</strong> 1-4 vendas/mês quase todos os meses. Custo zero. Em abril zerou — alerta para reativar com playbook do Luiz.</div></div>
+</div>
+
+<!-- PLANO MAIO -->
+<div class="pane" id="pane-maio">
+  <div class="sl">Decisões para maio · estado dos canais</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:11px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">
+      <div>Canal</div><div style="text-align:center;">Status maio</div><div>Plano</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Aplicação direta</div>
+      <div style="text-align:center;"><span class="badge badge-bad">desligado</span></div>
+      <div style="color:var(--text2);">Decisão tomada após queda de qualidade S2→S4</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Check-up</div>
+      <div style="text-align:center;"><span class="badge badge-ok">aumentar</span></div>
+      <div style="color:var(--text2);">Único canal com volume + conversão crescendo. Dobrar orçamento.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Novo CPL · 19/05</div>
+      <div style="text-align:center;"><span class="badge badge-purple">lançamento</span></div>
+      <div style="color:var(--text2);">Replicar fórmula da campanha 05/01 (que gerou 17 vendas em jan/26)</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Indicações (Luiz)</div>
+      <div style="text-align:center;"><span class="badge" style="background:#CCFBF1;color:#0F766E;">piloto</span></div>
+      <div style="color:var(--text2);">33 leads · 28 contatados · aguardando engajamento. Custo R$0.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Social Selling (Insta)</div>
+      <div style="text-align:center;"><span class="badge badge-bad">pausado</span></div>
+      <div style="color:var(--text2);">Sem responsável em maio. Não considerado nas metas. Era o maior canal histórico (6,2 vendas/mês em 2025).</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>No-show / Confirmação</div>
+      <div style="text-align:center;"><span class="badge badge-info">processo</span></div>
+      <div style="color:var(--text2);">Não agendar reuniões com mais de 7 dias de antecedência. Confirmação 24h antes obrigatória.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 110px 1.2fr;gap:8px;padding:10px 0;font-size:13px;align-items:center;">
+      <div>Bio Instagram</div>
+      <div style="text-align:center;"><span class="badge badge-warn">manter</span></div>
+      <div style="color:var(--text2);">2 vendas em abril · revisar conteúdo do feed que direciona à bio</div>
+    </div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">CPL 19/05 · ambição</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Referência · CPL 05/01</div>
+        <div style="font-size:28px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;">17 vendas</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:6px;">789 leads · R$ 19,4k investidos</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:4px;">Foi a campanha mais bem-sucedida da operação. Naquele mês, Otávio fechou 32%.</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;">Ambição · CPL 19/05</div>
+        <div style="font-size:28px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">≥ 17 vendas</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:6px;">Repetir e idealmente superar com aprendizados</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:4px;">12 dias úteis (19-30/05) · 2 closers prontos para receber leads quentes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Por que dá para superar 17:</strong> em jan/26 a operação tinha Otávio sozinho como closer principal recebendo o pico de leads. Em maio temos Otávio + Vanessa = capacidade dobrada para receber leads quentes do CPL.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Para superar é preciso:</strong> (a) reabrir mesmas criações que funcionaram em jan/26, (b) ajustar segmentação para perfil de mentorado-tipo, (c) ter SDRs prontos para o pico de demanda na semana seguinte, (d) closers em ritmo (Otávio voltando à conversão de jan).</div></div>
+
+  <hr class="d">
+  <div class="sl">Projeção maio · caminho até a meta de 30</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);font-size:11px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">
+      <div>Fonte</div><div style="text-align:center;">Vendas</div><div>Premissas</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Novo CPL (19/05)</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">≥17</div>
+      <div style="color:var(--text2);font-size:12px;">Replicar resultado de jan/26 com 2 closers ativos</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Check-up (dobrado)</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">5-6</div>
+      <div style="color:var(--text2);font-size:12px;">2x volume × 1,5% conv. + ganho de tendência crescente</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Lançamento (existente)</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">3</div>
+      <div style="color:var(--text2);font-size:12px;">Mantém ritmo S2-S3 de abril</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Bio Instagram</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2</div>
+      <div style="color:var(--text2);font-size:12px;">Repete abril</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Formulário Meta</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1-2</div>
+      <div style="color:var(--text2);font-size:12px;">Repete abril</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div>Indicações (Luiz)</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2-4</div>
+      <div style="color:var(--text2);font-size:12px;">4 retornos × 50% conv (canal indicado tem alta intenção)</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 60px 1.5fr;gap:8px;padding:11px 0;border-top:2px solid var(--border);font-size:14px;align-items:center;">
+      <div style="font-weight:600;">Total projetado</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;font-size:18px;color:var(--green-text);">30-34</div>
+      <div style="color:var(--green-text);font-size:12px;font-weight:500;">Atinge meta com folga se CPL 19/05 entregar como em jan/26</div>
+    </div>
+  </div>
+
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Cenário base:</strong> 30-34 vendas atingem ou ultrapassam a meta de 30. Sucesso depende do CPL 19/05 entregar pelo menos como o de janeiro.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Cenário pessimista (CPL entrega só 8-10):</strong> 21-25 vendas. Gap de 5-9 a fechar com aumento de eficiência (no-show abaixo de 25%, fechamento dos closers acima de 22%).</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Sugestão para junho:</strong> reativar Social Selling com responsável (cada mês sem o canal custa ~3-6 vendas, baseado no histórico). Estruturar programa formal de Indicações com playbook do Luiz. Documentar campanha CPL 19/05 para replicar trimestralmente.</div></div>
+</div>
+
 
 <script>
 function showTab(id){
-  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['s1','s2','s3','s4','comp'][i]===id));
+  const tabs=['s1','s2','s3','s4','comp','hist','maio'];
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',tabs[i]===id));
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+id));
   if(id==='comp'&&!window._c)buildCharts();
 }
@@ -523,8 +829,10 @@ function buildCharts(){
   ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v+'k'},grid:{color:gc},position:'left'},y2:{ticks:{color:tc,font:{size:10}},grid:{display:false},position:'right'}}}});
 
   new Chart(document.getElementById('cCPL'),{type:'line',data:{labels,datasets:[
-    {label:'CPL',data:[85,76,64,90],borderColor:'#D97706',backgroundColor:'rgba(217,119,6,0.07)',tension:t,fill:true,pointRadius:r,pointBackgroundColor:'#D97706'}
-  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v},grid:{color:gc},min:40,max:110}}}});
+    {label:'CPL',data:[85,76,64,90],borderColor:'#D97706',backgroundColor:'rgba(217,119,6,0.07)',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#D97706',yAxisID:'y'},
+    {label:'Custo/reun. realizada',data:[341,957,555,449],borderColor:'#B45309',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#B45309',yAxisID:'y'},
+    {label:'CAC',data:[3408,4304,5178,2471],borderColor:'#DC2626',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#DC2626',yAxisID:'y2'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v},grid:{color:gc},position:'left',title:{display:true,text:'CPL · C/Reun.',color:tc,font:{size:10}}},y2:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+(v/1000).toFixed(1)+'k'},grid:{display:false},position:'right',title:{display:true,text:'CAC',color:tc,font:{size:10}}}}}});
 
   new Chart(document.getElementById('cPcts'),{type:'line',data:{labels,datasets:[
     {label:'Retorno',data:[24,39,36,8],borderColor:'#2563EB',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#2563EB'},
@@ -533,10 +841,11 @@ function buildCharts(){
   ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>v+'%'},grid:{color:gc}}}}});
 
   new Chart(document.getElementById('cROAS'),{type:'line',data:{labels,datasets:[
-    {label:'Vendas',data:[2,4,2,1],borderColor:'#7C3AED',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#7C3AED',yAxisID:'y'},
-    {label:'ROAS',data:[7.9,6.3,3.5,5.5],borderColor:'#DC2626',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#DC2626',yAxisID:'y2'}
-  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10}},grid:{color:gc},position:'left'},y2:{ticks:{color:tc,font:{size:10},callback:v=>v+'x'},grid:{display:false},position:'right'}}}});
+    {label:'ROAS',data:[7.6,6.3,5.2,10.8],borderColor:'#DC2626',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#DC2626',yAxisID:'y'},
+    {label:'Tx conv. lead→venda %',data:[2.50,1.78,1.23,3.64],borderColor:'#7C3AED',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#7C3AED',yAxisID:'y2'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>v+'x'},grid:{color:gc},position:'left'},y2:{ticks:{color:tc,font:{size:10},callback:v=>v.toFixed(1)+'%'},grid:{display:false},position:'right'}}}});
 }
+
 </script>
 </body>
 </html>
