@@ -3,37 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard Marketing · Abril 2025</title>
+<title>Dashboard Marketing · Abril 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
-  :root {
-    --bg:#F5F4F0;--surface:#FFFFFF;--surface2:#EEECEA;--border:#E0DDD8;
-    --text:#1A1916;--text2:#6B6860;--text3:#9E9C98;
-    --blue:#2563EB;--blue-bg:#EFF4FF;--blue-text:#1D4ED8;
-    --green:#16A34A;--green-bg:#F0FDF4;--green-text:#15803D;
-    --amber:#D97706;--amber-bg:#FFFBEB;--amber-text:#B45309;
-    --red:#DC2626;--red-bg:#FEF2F2;--red-text:#B91C1C;
-    --purple:#7C3AED;--purple-bg:#F5F3FF;--purple-text:#6D28D9;
-  }
+  :root{--bg:#F5F4F0;--surface:#FFFFFF;--surface2:#EEECEA;--border:#E0DDD8;--text:#1A1916;--text2:#6B6860;--text3:#9E9C98;--blue:#2563EB;--blue-bg:#EFF4FF;--blue-text:#1D4ED8;--green:#16A34A;--green-bg:#F0FDF4;--green-text:#15803D;--amber:#D97706;--amber-bg:#FFFBEB;--amber-text:#B45309;--red:#DC2626;--red-bg:#FEF2F2;--red-text:#B91C1C;--purple:#7C3AED;--purple-bg:#F5F3FF;--purple-text:#6D28D9;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;padding:32px 24px;max-width:980px;margin:0 auto;}
-  .page-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
-  .page-title{font-size:22px;font-weight:600;letter-spacing:-0.5px;}
-  .page-sub{font-size:13px;color:var(--text2);font-family:'DM Mono',monospace;}
+  .ph{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+  .pt{font-size:22px;font-weight:600;letter-spacing:-0.5px;}
+  .ps{font-size:13px;color:var(--text2);font-family:'DM Mono',monospace;}
   .tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:28px;overflow-x:auto;}
   .tab{padding:10px 18px;font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap;flex-shrink:0;}
-  .tab:hover{color:var(--text);}
-  .tab.active{color:var(--text);border-bottom-color:var(--blue);}
+  .tab:hover{color:var(--text);}.tab.active{color:var(--text);border-bottom-color:var(--blue);}
   .pane{display:none;}.pane.active{display:block;}
-  .section-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;margin-top:24px;}
-  .section-label:first-child{margin-top:0;}
-  .metric-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px;}
-  .metric-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
-  .metric-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;}
-  .metric-label{font-size:11px;color:var(--text3);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;}
-  .metric-value{font-size:24px;font-weight:600;letter-spacing:-1px;line-height:1;margin-bottom:6px;font-family:'DM Mono',monospace;}
-  .metric-sub{font-size:11px;color:var(--text2);margin-top:4px;}
+  .sl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;margin-top:24px;}
+  .sl:first-child{margin-top:0;}
+  .mg5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px;}
+  .mg4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+  .mg3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+  .mc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .ml{font-size:11px;color:var(--text3);font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;}
+  .mv{font-size:24px;font-weight:600;letter-spacing:-1px;line-height:1;margin-bottom:6px;font-family:'DM Mono',monospace;}
+  .ms{font-size:11px;color:var(--text2);margin-top:4px;}
   .badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 8px;border-radius:20px;}
   .badge-warn{background:var(--amber-bg);color:var(--amber-text);}
   .badge-ok{background:var(--green-bg);color:var(--green-text);}
@@ -41,368 +33,509 @@
   .badge-info{background:var(--blue-bg);color:var(--blue-text);}
   .badge-purple{background:var(--purple-bg);color:var(--purple-text);}
   .ug{color:var(--green-text);font-size:11px;}.dg{color:var(--green-text);font-size:11px;}.ub{color:var(--red-text);font-size:11px;}.nn{color:var(--text3);font-size:11px;}
-  hr.divider{border:none;border-top:1px solid var(--border);margin:24px 0;}
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
-  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
+  hr.d{border:none;border-top:1px solid var(--border);margin:24px 0;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+  .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;}
-  .card-title{font-size:11px;font-weight:600;color:var(--text2);margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em;}
-  .funnel-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
-  .funnel-label{font-size:12px;color:var(--text2);width:105px;flex-shrink:0;}
-  .funnel-bar-bg{flex:1;background:var(--surface2);border-radius:3px;height:16px;overflow:hidden;}
-  .funnel-bar{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:10px;font-weight:600;color:#fff;min-width:22px;font-family:'DM Mono',monospace;}
-  .funnel-pct{font-size:11px;font-weight:600;color:var(--text);width:36px;text-align:right;flex-shrink:0;font-family:'DM Mono',monospace;}
-  .card-footer{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--text2);display:flex;gap:16px;flex-wrap:wrap;}
-  .card-footer strong{color:var(--text);}
-  /* comp table 3 cols */
+  .ct{font-size:11px;font-weight:600;color:var(--text2);margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em;}
+  .fr{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+  .fl{font-size:12px;color:var(--text2);width:105px;flex-shrink:0;}
+  .fb{flex:1;background:var(--surface2);border-radius:3px;height:16px;overflow:hidden;}
+  .ff{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:6px;font-size:10px;font-weight:600;color:#fff;min-width:22px;font-family:'DM Mono',monospace;}
+  .fp{font-size:11px;font-weight:600;color:var(--text);width:36px;text-align:right;flex-shrink:0;font-family:'DM Mono',monospace;}
+  .cf{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--text2);display:flex;gap:16px;flex-wrap:wrap;}
+  .cf strong{color:var(--text);}
   .ch{display:flex;justify-content:flex-end;margin-bottom:4px;font-size:10px;color:var(--text3);font-family:'DM Mono',monospace;}
-  .ch span{width:64px;text-align:right;}
+  .ch span{width:60px;text-align:right;}
   .cr{display:flex;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;}
   .cr:last-child{border-bottom:none;}
   .cl{flex:1;color:var(--text2);}
-  .cv{width:64px;text-align:right;font-family:'DM Mono',monospace;}
-  .cv.s1{color:var(--text3);font-size:11px;}.cv.s2{color:var(--text3);font-size:11px;}.cv.s3{font-weight:600;}
-  .cd{width:56px;text-align:right;font-size:11px;font-weight:600;font-family:'DM Mono',monospace;}
+  .cv{width:60px;text-align:right;font-family:'DM Mono',monospace;}
+  .cv.s1{color:var(--text3);font-size:11px;}.cv.s2{color:var(--text3);font-size:11px;}.cv.s3{color:var(--text3);font-size:11px;}.cv.s4{font-weight:600;}
+  .cd{width:52px;text-align:right;font-size:11px;font-weight:600;font-family:'DM Mono',monospace;}
   .dug{color:var(--green-text);}.ddg{color:var(--green-text);}.dub{color:var(--red-text);}.ddb{color:var(--red-text);}.dn{color:var(--text3);}
-  .insight{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;font-size:13px;line-height:1.6;}
+  .ins{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;font-size:13px;line-height:1.6;}
   .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px;}
   .dot-ok{background:var(--green);}.dot-warn{background:var(--amber);}.dot-bad{background:var(--red);}.dot-info{background:var(--blue);}
-  .legend{display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:var(--text2);flex-wrap:wrap;}
-  .legend-item{display:flex;align-items:center;gap:6px;}
-  .legend-sq{width:10px;height:10px;border-radius:2px;}
-  .chart-wrap{position:relative;width:100%;}
-  .resumo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+  .leg{display:flex;gap:16px;margin-bottom:10px;font-size:12px;color:var(--text2);flex-wrap:wrap;}
+  .li{display:flex;align-items:center;gap:6px;}
+  .ls{width:24px;height:3px;border-radius:2px;}
+  .cw{position:relative;width:100%;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
   .rv{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;}
-  .rv-val{font-size:26px;font-weight:600;letter-spacing:-1px;font-family:'DM Mono',monospace;line-height:1;}
-  .rv-lbl{font-size:11px;color:var(--text2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em;}
-  @media(max-width:680px){.metric-grid,.metric-grid-4{grid-template-columns:repeat(2,1fr);}.two-col,.three-col{grid-template-columns:1fr;}.resumo-grid{grid-template-columns:repeat(2,1fr);}.tab{padding:8px 12px;font-size:11px;}}
+  .rvv{font-size:26px;font-weight:600;letter-spacing:-1px;font-family:'DM Mono',monospace;line-height:1;}
+  .rvl{font-size:11px;color:var(--text2);margin-top:6px;text-transform:uppercase;letter-spacing:.05em;}
+  .canal-header{display:grid;grid-template-columns:1fr 56px 56px 56px 56px 64px;padding-bottom:8px;border-bottom:1px solid var(--border);font-size:10px;color:var(--text3);font-weight:600;letter-spacing:.05em;text-transform:uppercase;}
+  .canal-row{display:grid;grid-template-columns:1fr 56px 56px 56px 56px 64px;padding:9px 0;border-bottom:1px solid var(--border);font-size:12px;align-items:center;}
+  .canal-row:last-child{border-bottom:none;}
+  @media(max-width:680px){.mg5,.mg4,.mg3{grid-template-columns:repeat(2,1fr);}.two,.three{grid-template-columns:1fr;}.rg{grid-template-columns:repeat(2,1fr);}.tab{padding:8px 12px;font-size:11px;}}
 </style>
 </head>
 <body>
-<div class="page-header">
-  <div><div class="page-title">Dashboard Marketing</div><div class="page-sub">Abril 2025 · Semanas 1, 2 e 3</div></div>
-</div>
+<div class="ph"><div><div class="pt">Dashboard Marketing</div><div class="ps">Abril 2026 · Semanas 1 a 4</div></div></div>
 <div class="tabs">
-  <div class="tab active" onclick="showTab('s1')">Semana 1 · 03–10/04</div>
-  <div class="tab" onclick="showTab('s2')">Semana 2 · 11–17/04</div>
-  <div class="tab" onclick="showTab('s3')">Semana 3 · 18–24/04</div>
-  <div class="tab" onclick="showTab('comp')">Compilado + Comparativo</div>
+  <div class="tab active" onclick="showTab('s1')">S1 · 03–10/04</div>
+  <div class="tab" onclick="showTab('s2')">S2 · 11–17/04</div>
+  <div class="tab" onclick="showTab('s3')">S3 · 18–24/04</div>
+  <div class="tab" onclick="showTab('s4')">S4 · 25–30/04</div>
+  <div class="tab" onclick="showTab('comp')">Compilado</div>
 </div>
 
-<!-- ===== S1 ===== -->
+<!-- S1 -->
 <div class="pane active" id="pane-s1">
-  <div class="section-label">Visão geral</div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Total de leads</div><div class="metric-value">80</div><div class="metric-sub"><span class="badge badge-info">4 canais</span></div></div>
-    <div class="metric-card"><div class="metric-label">Investimento</div><div class="metric-value">R$6,8k</div><div class="metric-sub">R$6.816,07</div></div>
-    <div class="metric-card"><div class="metric-label">CPL médio</div><div class="metric-value">R$85</div></div>
-    <div class="metric-card"><div class="metric-label">Vendas líq.</div><div class="metric-value">2</div><div class="metric-sub">3 brutas – 1 cancel.</div></div>
-    <div class="metric-card"><div class="metric-label">ROAS · ROI</div><div class="metric-value">7,9x</div><div class="metric-sub"><span class="badge badge-ok">ROI 692%</span></div></div>
+  <div class="sl">Visão geral · S1</div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Leads</div><div class="mv">80</div><div class="ms"><span class="badge badge-info">4 canais</span></div></div>
+    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$6,8k</div><div class="ms">R$6.816,07</div></div>
+    <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$85</div></div>
+    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">2</div><div class="ms">3 brutas – 1 cancel.</div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">7,9x</div><div class="ms"><span class="badge badge-ok">ROI 692%</span></div></div>
   </div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Contatados</div><div class="metric-value">68</div><div class="metric-sub"><span class="badge badge-warn">85% leads</span></div></div>
-    <div class="metric-card"><div class="metric-label">Retornaram</div><div class="metric-value">16</div><div class="metric-sub"><span class="badge badge-bad">24% contatos</span></div></div>
-    <div class="metric-card"><div class="metric-label">Agendaram</div><div class="metric-value">9</div><div class="metric-sub"><span class="badge badge-warn">11% leads</span></div></div>
-    <div class="metric-card"><div class="metric-label">Compareceram</div><div class="metric-value">2</div><div class="metric-sub"><span class="badge badge-bad">22% agend.</span></div></div>
-    <div class="metric-card"><div class="metric-label">Faturamento líq.</div><div class="metric-value">R$54k</div></div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Contatados</div><div class="mv">68</div><div class="ms"><span class="badge badge-warn">85% leads</span></div></div>
+    <div class="mc"><div class="ml">Retornaram</div><div class="mv">16</div><div class="ms"><span class="badge badge-bad">24% contatos</span></div></div>
+    <div class="mc"><div class="ml">Agendaram</div><div class="mv">9</div><div class="ms"><span class="badge badge-warn">11% leads</span></div></div>
+    <div class="mc"><div class="ml">Compareceram</div><div class="mv">2</div><div class="ms"><span class="badge badge-bad">22% agend.</span></div></div>
+    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$54k</div></div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Funil por canal</div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title" style="color:#1D4ED8;">Formulário Meta · 42 leads · R$955</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#2563EB;">42</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:90%;background:#2563EB;">38</div></div><div class="funnel-pct">90%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:14%;background:#1D4ED8;">6</div></div><div class="funnel-pct">14%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:10%;background:#1E40AF;">4</div></div><div class="funnel-pct">10%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:2%;background:#1E3A8A;min-width:22px;">1</div></div><div class="funnel-pct">2%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$22,74</strong></span><span>CP/Agend.: <strong>R$238,78</strong></span></div>
+  <hr class="d">
+  <div class="sl">Funil por canal</div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#1D4ED8;">Formulário Meta · 42 leads · R$955</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#2563EB;">42</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:90%;background:#2563EB;">38</div></div><div class="fp">90%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:14%;background:#1D4ED8;">6</div></div><div class="fp">14%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:10%;background:#1E40AF;">4</div></div><div class="fp">10%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:2%;background:#1E3A8A;min-width:22px;">1</div></div><div class="fp">2%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$22,74</strong></span><span>CP/Agend.: <strong>R$238,78</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#C2410C;">Aplicação direta · 18 leads · R$4.185</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#EA580C;">18</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:67%;background:#EA580C;">12</div></div><div class="funnel-pct">67%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:22%;background:#C2410C;">4</div></div><div class="funnel-pct">22%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:22%;background:#9A3412;">4</div></div><div class="funnel-pct">22%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#7C2D12;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#431407;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$232,50</strong></span><span>CP/Agend.: <strong>R$1.046</strong></span></div>
+    <div class="card"><div class="ct" style="color:#C2410C;">Aplicação direta · 18 leads · R$4.185</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">18</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:67%;background:#EA580C;">12</div></div><div class="fp">67%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:22%;background:#C2410C;">4</div></div><div class="fp">22%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:22%;background:#9A3412;">4</div></div><div class="fp">22%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#7C2D12;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#431407;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$232,50</strong></span><span>CP/Agend.: <strong>R$1.046</strong></span></div>
     </div>
   </div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title" style="color:#B45309;">Check-up · 14 leads · R$630</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#D97706;">14</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:86%;background:#D97706;">12</div></div><div class="funnel-pct">86%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:36%;background:#B45309;">5</div></div><div class="funnel-pct">36%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:7%;background:#92400E;min-width:22px;">1</div></div><div class="funnel-pct">7%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:7%;background:#78350F;min-width:22px;">1</div></div><div class="funnel-pct">7%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$45,03</strong></span><span>CP/Agend.: <strong>R$630,37</strong></span></div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#B45309;">Check-up · 14 leads · R$630</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">14</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:86%;background:#D97706;">12</div></div><div class="fp">86%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:36%;background:#B45309;">5</div></div><div class="fp">36%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:7%;background:#92400E;min-width:22px;">1</div></div><div class="fp">7%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:7%;background:#78350F;min-width:22px;">1</div></div><div class="fp">7%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$45,03</strong></span><span>CP/Agend.: <strong>R$630,37</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#BE185D;">Bio Instagram · 6 leads · R$1.046</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#DB2777;">6</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#DB2777;">6</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:17%;background:#BE185D;min-width:22px;">1</div></div><div class="funnel-pct">17%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#9D174D;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#831843;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#500724;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$174,27</strong></span><span>CP/Agend.: <strong>—</strong></span></div>
+    <div class="card"><div class="ct" style="color:#BE185D;">Bio Instagram · 6 leads · R$1.046</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">6</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">6</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:17%;background:#BE185D;min-width:22px;">1</div></div><div class="fp">17%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:0%;background:#9D174D;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#831843;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#500724;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$174,27</strong></span><span>CP/Agend.: <strong>—</strong></span></div>
     </div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Insights</div>
-  <div class="insight"><div class="dot dot-bad"></div><div><strong>Comparecimento crítico:</strong> apenas 22% dos agendados apareceram. Gargalo principal da semana.</div></div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Formulário Meta com melhor CPL:</strong> R$22,74 — canal mais eficiente em custo, mas com taxa de retorno baixa (14%).</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>Aplicação direta cara:</strong> 10x mais que o Meta e zerou comparecimentos.</div></div>
-  <div class="insight"><div class="dot dot-bad"></div><div><strong>Bio Instagram sem resultado na S1:</strong> R$1.046 investidos, 0 agendamentos, 0 vendas.</div></div>
+  <hr class="d">
+  <div class="sl">Insights</div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Comparecimento crítico:</strong> apenas 22% dos agendados apareceram.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Formulário Meta com melhor CPL:</strong> R$22,74 — canal mais eficiente em custo.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Aplicação direta cara:</strong> 10x mais que o Meta e zerou comparecimentos.</div></div>
 </div>
 
-<!-- ===== S2 ===== -->
+<!-- S2 -->
 <div class="pane" id="pane-s2">
-  <div class="section-label">Visão geral</div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Total de leads</div><div class="metric-value">225</div><div class="metric-sub"><span class="badge badge-info">5 canais</span> <span class="ug">↑ +181%</span></div></div>
-    <div class="metric-card"><div class="metric-label">Investimento</div><div class="metric-value">R$17,2k</div><div class="metric-sub"><span class="ub">↑ +152% vs S1</span></div></div>
-    <div class="metric-card"><div class="metric-label">CPL médio</div><div class="metric-value">R$76</div><div class="metric-sub"><span class="dg">↓ -11% vs S1</span></div></div>
-    <div class="metric-card"><div class="metric-label">Vendas</div><div class="metric-value">4</div><div class="metric-sub"><span class="ug">↑ +2 líq. vs S1</span></div></div>
-    <div class="metric-card"><div class="metric-label">ROAS · ROI</div><div class="metric-value">6,3x</div><div class="metric-sub"><span class="badge badge-ok">ROI 527%</span></div></div>
+  <div class="sl">Visão geral · S2</div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Leads</div><div class="mv">225</div><div class="ms"><span class="ug">↑ +181% vs S1</span></div></div>
+    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$17,2k</div><div class="ms"><span class="ub">↑+152%</span></div></div>
+    <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$76</div><div class="ms"><span class="dg">↓-11%</span></div></div>
+    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">4</div><div class="ms"><span class="ug">↑+2</span></div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">6,3x</div><div class="ms"><span class="badge badge-ok">ROI 527%</span></div></div>
   </div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Contatados</div><div class="metric-value">110</div><div class="metric-sub"><span class="badge badge-warn">49% leads</span></div></div>
-    <div class="metric-card"><div class="metric-label">Retornaram</div><div class="metric-value">43</div><div class="metric-sub"><span class="badge badge-ok">39% contatos</span> <span class="ug">↑ +15pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Agendaram</div><div class="metric-value">19</div><div class="metric-sub"><span class="badge badge-warn">8% leads</span></div></div>
-    <div class="metric-card"><div class="metric-label">Compareceram</div><div class="metric-value">10</div><div class="metric-sub"><span class="badge badge-ok">53% agend.</span> <span class="ug">↑ +31pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Faturamento</div><div class="metric-value">R$108k</div></div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Contatados</div><div class="mv">110</div><div class="ms"><span class="badge badge-warn">49% leads</span></div></div>
+    <div class="mc"><div class="ml">Retornaram</div><div class="mv">43</div><div class="ms"><span class="badge badge-ok">39% contatos</span></div></div>
+    <div class="mc"><div class="ml">Agendaram</div><div class="mv">19</div><div class="ms"><span class="badge badge-warn">8% leads</span></div></div>
+    <div class="mc"><div class="ml">Compareceram</div><div class="mv">10</div><div class="ms"><span class="badge badge-ok">53% agend.</span></div></div>
+    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$108k</div></div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Funil por canal</div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title" style="color:#6D28D9;">Lançamento · 160 leads · R$11.122</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#7C3AED;">160</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:31%;background:#7C3AED;">50</div></div><div class="funnel-pct">31%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:9%;background:#6D28D9;">15</div></div><div class="funnel-pct">9%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:4%;background:#5B21B6;min-width:22px;">6</div></div><div class="funnel-pct">4%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:2%;background:#4C1D95;min-width:22px;">3</div></div><div class="funnel-pct">2%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:1%;background:#3B0764;min-width:22px;">2</div></div><div class="funnel-pct">1%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$69,51</strong></span><span>CP/Agend.: <strong>R$1.854</strong></span></div>
+  <hr class="d">
+  <div class="sl">Funil por canal</div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#6D28D9;">Lançamento · 160 leads · R$11.122</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#7C3AED;">160</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:31%;background:#7C3AED;">50</div></div><div class="fp">31%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:9%;background:#6D28D9;">15</div></div><div class="fp">9%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:4%;background:#5B21B6;min-width:22px;">6</div></div><div class="fp">4%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:2%;background:#4C1D95;min-width:22px;">3</div></div><div class="fp">2%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:1%;background:#3B0764;min-width:22px;">2</div></div><div class="fp">1%</div></div>
+      <div class="cf"><span>CPL: <strong>R$69,51</strong></span><span>CP/Agend.: <strong>R$1.854</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#BE185D;">Bio Instagram · 12 leads · R$1.048</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#DB2777;">12</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:92%;background:#DB2777;">11</div></div><div class="funnel-pct">92%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:83%;background:#BE185D;">10</div></div><div class="funnel-pct">83%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:42%;background:#9D174D;">5</div></div><div class="funnel-pct">42%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:42%;background:#831843;">5</div></div><div class="funnel-pct">42%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:8%;background:#500724;min-width:22px;">1</div></div><div class="funnel-pct">8%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$87,37</strong></span><span>CP/Agend.: <strong>R$209,69</strong></span></div>
+    <div class="card"><div class="ct" style="color:#BE185D;">Bio Instagram · 12 leads · R$1.048</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">12</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:92%;background:#DB2777;">11</div></div><div class="fp">92%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:83%;background:#BE185D;">10</div></div><div class="fp">83%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:42%;background:#9D174D;">5</div></div><div class="fp">42%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:42%;background:#831843;">5</div></div><div class="fp">42%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:8%;background:#500724;min-width:22px;">1</div></div><div class="fp">8%</div></div>
+      <div class="cf"><span>CPL: <strong>R$87,37</strong></span><span>CP/Agend.: <strong>R$209,69</strong></span></div>
     </div>
   </div>
-  <div class="three-col">
-    <div class="card">
-      <div class="card-title" style="color:#C2410C;">Aplic. direta · 19 · R$3.621</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#EA580C;">19</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:84%;background:#EA580C;">16</div></div><div class="funnel-pct">84%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:26%;background:#C2410C;">5</div></div><div class="funnel-pct">26%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:26%;background:#9A3412;">5</div></div><div class="funnel-pct">26%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:11%;background:#7C2D12;min-width:22px;">2</div></div><div class="funnel-pct">11%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:5%;background:#431407;min-width:22px;">1</div></div><div class="funnel-pct">5%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$190</strong></span><span>CP/A.: <strong>R$724</strong></span></div>
+  <div class="three">
+    <div class="card"><div class="ct" style="color:#C2410C;">Aplic. direta · 19 · R$3.621</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">19</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:84%;background:#EA580C;">16</div></div><div class="fp">84%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:26%;background:#C2410C;">5</div></div><div class="fp">26%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:26%;background:#9A3412;">5</div></div><div class="fp">26%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:11%;background:#7C2D12;min-width:22px;">2</div></div><div class="fp">11%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:5%;background:#431407;min-width:22px;">1</div></div><div class="fp">5%</div></div>
+      <div class="cf"><span>CPL: <strong>R$190</strong></span><span>CP/A.: <strong>R$724</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#1D4ED8;">Form. Meta · 26 · R$967</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#2563EB;">26</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:96%;background:#2563EB;">25</div></div><div class="funnel-pct">96%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:31%;background:#1D4ED8;">8</div></div><div class="funnel-pct">31%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:12%;background:#1E40AF;min-width:22px;">3</div></div><div class="funnel-pct">12%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#1E3A8A;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$37</strong></span><span>CP/A.: <strong>R$322</strong></span></div>
+    <div class="card"><div class="ct" style="color:#1D4ED8;">Form. Meta · 26 · R$967</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#2563EB;">26</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:96%;background:#2563EB;">25</div></div><div class="fp">96%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:31%;background:#1D4ED8;">8</div></div><div class="fp">31%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:12%;background:#1E40AF;min-width:22px;">3</div></div><div class="fp">12%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#1E3A8A;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$37</strong></span><span>CP/A.: <strong>R$322</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#B45309;">Check-up · 8 · R$459</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#D97706;">8</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#D97706;">8</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:63%;background:#B45309;">5</div></div><div class="funnel-pct">63%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#92400E;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#78350F;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$57</strong></span><span>CP/A.: <strong>—</strong></span></div>
+    <div class="card"><div class="ct" style="color:#B45309;">Check-up · 8 · R$459</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">8</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">8</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:63%;background:#B45309;">5</div></div><div class="fp">63%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:0%;background:#92400E;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#78350F;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$57</strong></span><span>CP/A.: <strong>—</strong></span></div>
     </div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Insights</div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Grande melhora no comparecimento:</strong> 53% vs 22% da S1. 4 vendas fechadas.</div></div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Bio Instagram virou o melhor canal de conversão:</strong> 42% de agendamento e 1 venda com mesmo investimento da S1.</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>Lançamento trouxe volume mas conversão baixa:</strong> CP/agendamento de R$1.854 — o mais caro.</div></div>
-  <div class="insight"><div class="dot dot-bad"></div><div><strong>Check-up zerou agendamentos:</strong> 63% de retorno mas nenhum avanço no funil.</div></div>
+  <hr class="d">
+  <div class="sl">Insights</div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Comparecimento subiu para 53%</strong> — grande melhora vs S1 (22%). 4 vendas fechadas.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Bio Instagram virou o melhor canal de conversão:</strong> 42% de agendamento e 1 venda.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Lançamento:</strong> volume alto mas CP/agendamento de R$1.854.</div></div>
 </div>
 
-<!-- ===== S3 ===== -->
+<!-- S3 -->
 <div class="pane" id="pane-s3">
-  <div class="section-label">Visão geral</div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Total de leads</div><div class="metric-value">243</div><div class="metric-sub"><span class="badge badge-info">5 canais</span> <span class="ug">↑ +8% vs S2</span></div></div>
-    <div class="metric-card"><div class="metric-label">Investimento</div><div class="metric-value">R$15,5k</div><div class="metric-sub"><span class="dg">↓ -10% vs S2</span></div></div>
-    <div class="metric-card"><div class="metric-label">CPL médio</div><div class="metric-value">R$64</div><div class="metric-sub"><span class="dg">↓ -16% vs S2</span></div></div>
-    <div class="metric-card"><div class="metric-label">Vendas</div><div class="metric-value">2</div><div class="metric-sub"><span class="ub">↓ -2 vs S2</span></div></div>
-    <div class="metric-card"><div class="metric-label">ROAS · ROI</div><div class="metric-value">3,5x</div><div class="metric-sub"><span class="badge badge-warn">ROI 248%</span></div></div>
+  <div class="sl">Visão geral · S3</div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Leads</div><div class="mv">243</div><div class="ms"><span class="ug">↑+8% vs S2</span></div></div>
+    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$15,5k</div><div class="ms"><span class="dg">↓-10%</span></div></div>
+    <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$64</div><div class="ms"><span class="dg">↓-16%</span></div></div>
+    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">2</div><div class="ms"><span class="ub">↓-2</span></div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">3,5x</div><div class="ms"><span class="badge badge-warn">ROI 248%</span></div></div>
   </div>
-  <div class="metric-grid">
-    <div class="metric-card"><div class="metric-label">Contatados</div><div class="metric-value">99</div><div class="metric-sub"><span class="badge badge-warn">41% leads</span> <span class="ub">↓ -8pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Retornaram</div><div class="metric-value">36</div><div class="metric-sub"><span class="badge badge-ok">36% contatos</span> <span class="ub">↓ -3pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Agendaram</div><div class="metric-value">29</div><div class="metric-sub"><span class="badge badge-ok">12% leads</span> <span class="ug">↑ +4pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Compareceram</div><div class="metric-value">18</div><div class="metric-sub"><span class="badge badge-ok">62% agend.</span> <span class="ug">↑ +9pp</span></div></div>
-    <div class="metric-card"><div class="metric-label">Faturamento</div><div class="metric-value">R$54k</div><div class="metric-sub">2 × R$27k</div></div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Contatados</div><div class="mv">99</div><div class="ms"><span class="badge badge-warn">41% leads</span></div></div>
+    <div class="mc"><div class="ml">Retornaram</div><div class="mv">36</div><div class="ms"><span class="badge badge-ok">36% contatos</span></div></div>
+    <div class="mc"><div class="ml">Agendaram</div><div class="mv">29</div><div class="ms"><span class="badge badge-ok">12% leads</span></div></div>
+    <div class="mc"><div class="ml">Compareceram</div><div class="mv">18</div><div class="ms"><span class="badge badge-ok">62% agend.</span></div></div>
+    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$54k</div></div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Funil por canal</div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title" style="color:#6D28D9;">Lançamento · 171 leads · R$8.934</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#7C3AED;">171</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:23%;background:#7C3AED;">39</div></div><div class="funnel-pct">23%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:11%;background:#6D28D9;">19</div></div><div class="funnel-pct">11%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:11%;background:#5B21B6;">19</div></div><div class="funnel-pct">11%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:9%;background:#4C1D95;min-width:22px;">15</div></div><div class="funnel-pct">9%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:1%;background:#3B0764;min-width:22px;">1</div></div><div class="funnel-pct">1%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$52,24</strong></span><span>CP/Agend.: <strong>R$470,21</strong></span></div>
+  <hr class="d">
+  <div class="sl">Funil por canal</div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#6D28D9;">Lançamento · 171 leads · R$8.934</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#7C3AED;">171</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:23%;background:#7C3AED;">39</div></div><div class="fp">23%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:11%;background:#6D28D9;">19</div></div><div class="fp">11%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:11%;background:#5B21B6;">19</div></div><div class="fp">11%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:9%;background:#4C1D95;min-width:22px;">15</div></div><div class="fp">9%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:1%;background:#3B0764;min-width:22px;">1</div></div><div class="fp">1%</div></div>
+      <div class="cf"><span>CPL: <strong>R$52,24</strong></span><span>CP/Agend.: <strong>R$470,21</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#C2410C;">Aplic. direta · 24 leads · R$3.891</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#EA580C;">24</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:83%;background:#EA580C;">20</div></div><div class="funnel-pct">83%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:21%;background:#C2410C;">5</div></div><div class="funnel-pct">21%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:13%;background:#9A3412;min-width:22px;">3</div></div><div class="funnel-pct">13%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:4%;background:#7C2D12;min-width:22px;">1</div></div><div class="funnel-pct">4%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:4%;background:#431407;min-width:22px;">1</div></div><div class="funnel-pct">4%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$162,11</strong></span><span>CP/Agend.: <strong>R$1.297</strong></span></div>
+    <div class="card"><div class="ct" style="color:#C2410C;">Aplic. direta · 24 leads · R$3.891</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">24</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:83%;background:#EA580C;">20</div></div><div class="fp">83%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:21%;background:#C2410C;">5</div></div><div class="fp">21%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:13%;background:#9A3412;min-width:22px;">3</div></div><div class="fp">13%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:4%;background:#7C2D12;min-width:22px;">1</div></div><div class="fp">4%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:4%;background:#431407;min-width:22px;">1</div></div><div class="fp">4%</div></div>
+      <div class="cf"><span>CPL: <strong>R$162,11</strong></span><span>CP/Agend.: <strong>R$1.297</strong></span></div>
     </div>
   </div>
-  <div class="three-col">
-    <div class="card">
-      <div class="card-title" style="color:#1D4ED8;">Form. Meta · 34 leads · R$983</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#2563EB;">34</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:85%;background:#2563EB;">29</div></div><div class="funnel-pct">85%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:15%;background:#1D4ED8;">5</div></div><div class="funnel-pct">15%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:9%;background:#1E40AF;min-width:22px;">3</div></div><div class="funnel-pct">9%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:3%;background:#1E3A8A;min-width:22px;">1</div></div><div class="funnel-pct">3%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$28,91</strong></span><span>CP/A.: <strong>R$327,69</strong></span></div>
+  <div class="three">
+    <div class="card"><div class="ct" style="color:#1D4ED8;">Form. Meta · 34 · R$983</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#2563EB;">34</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:85%;background:#2563EB;">29</div></div><div class="fp">85%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:15%;background:#1D4ED8;">5</div></div><div class="fp">15%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:9%;background:#1E40AF;min-width:22px;">3</div></div><div class="fp">9%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:3%;background:#1E3A8A;min-width:22px;">1</div></div><div class="fp">3%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#1e3a8a;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$28,91</strong></span><span>CP/A.: <strong>R$327,69</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#BE185D;">Bio Instagram · 10 leads · R$1.054</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#DB2777;">10</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:70%;background:#DB2777;">7</div></div><div class="funnel-pct">70%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:40%;background:#BE185D;">4</div></div><div class="funnel-pct">40%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:30%;background:#9D174D;">3</div></div><div class="funnel-pct">30%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:10%;background:#831843;min-width:22px;">1</div></div><div class="funnel-pct">10%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#500724;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$105,37</strong></span><span>CP/A.: <strong>R$351,24</strong></span></div>
+    <div class="card"><div class="ct" style="color:#BE185D;">Bio Instagram · 10 · R$1.054</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">10</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:70%;background:#DB2777;">7</div></div><div class="fp">70%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:40%;background:#BE185D;">4</div></div><div class="fp">40%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:30%;background:#9D174D;">3</div></div><div class="fp">30%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:10%;background:#831843;min-width:22px;">1</div></div><div class="fp">10%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#500724;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$105,37</strong></span><span>CP/A.: <strong>R$351,24</strong></span></div>
     </div>
-    <div class="card">
-      <div class="card-title" style="color:#B45309;">Check-up · 4 leads · R$673</div>
-      <div class="funnel-row"><div class="funnel-label">Leads</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#D97706;">4</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Contatados</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:100%;background:#D97706;">4</div></div><div class="funnel-pct">100%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Retornaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:75%;background:#B45309;">3</div></div><div class="funnel-pct">75%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Agendaram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:25%;background:#92400E;min-width:22px;">1</div></div><div class="funnel-pct">25%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compareceram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#78350F;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="funnel-row"><div class="funnel-label">Compraram</div><div class="funnel-bar-bg"><div class="funnel-bar" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="funnel-pct">0%</div></div>
-      <div class="card-footer"><span>CPL: <strong>R$168,14</strong></span><span>CP/A.: <strong>R$672,57</strong></span></div>
+    <div class="card"><div class="ct" style="color:#B45309;">Check-up · 4 · R$673</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">4</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">4</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:75%;background:#B45309;">3</div></div><div class="fp">75%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:25%;background:#92400E;min-width:22px;">1</div></div><div class="fp">25%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#78350F;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$168,14</strong></span><span>CP/A.: <strong>R$672,57</strong></span></div>
     </div>
   </div>
-  <hr class="divider">
-  <div class="section-label">Insights</div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Comparecimento continua subindo:</strong> 62% dos agendados apareceram — melhor marca das 3 semanas. 29 agendamentos, recorde do período.</div></div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Lançamento melhorou conversão no funil:</strong> 19 agendamentos (vs 6 na S2) com menor investimento (R$8.934 vs R$11.122). CPL caiu de R$69 para R$52.</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>ROAS caiu para 3,5x:</strong> apenas 2 vendas apesar do alto volume de comparecimentos (18). Taxa de conversão presencial ainda baixa — oportunidade para o closer.</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>Formulário Meta se recupera:</strong> CPL voltou a cair (R$28,91 vs R$37 na S2) com mais leads e mais contatos. Sem vendas ainda, mas funil melhorando.</div></div>
-  <div class="insight"><div class="dot dot-bad"></div><div><strong>Bio Instagram perdeu eficiência vs S2:</strong> comparecimento caiu de 42% para 10% e zero vendas. Canal instável — monitorar tendência.</div></div>
+  <hr class="d">
+  <div class="sl">Insights</div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Comparecimento recorde: 62%</strong> — e 29 agendamentos, maior volume do mês.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>ROAS caiu para 3,5x:</strong> apenas 2 vendas apesar de 18 comparecimentos. Gargalo no fechamento.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Lançamento melhorou:</strong> 19 agendamentos vs 6 na S2, CPL caiu de R$69 para R$52.</div></div>
 </div>
 
-<!-- ===== COMPILADO ===== -->
+<!-- S4 -->
+<div class="pane" id="pane-s4">
+  <div class="sl">Visão geral · S4</div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Leads</div><div class="mv">55</div><div class="ms"><span class="ub">↓-77% vs S3</span> <span class="nn">sem lançamento</span></div></div>
+    <div class="mc"><div class="ml">Investimento</div><div class="mv">R$4,9k</div><div class="ms"><span class="dg">↓-68% vs S3</span></div></div>
+    <div class="mc"><div class="ml">CPL médio</div><div class="mv">R$90</div><div class="ms"><span class="ub">↑+41% vs S3</span></div></div>
+    <div class="mc"><div class="ml">Vendas líq.</div><div class="mv">1</div><div class="ms">Form. Meta</div></div>
+    <div class="mc"><div class="ml">ROAS · ROI</div><div class="mv">5,5x</div><div class="ms"><span class="badge badge-ok">ROI 447%</span></div></div>
+  </div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Contatados</div><div class="mv">150</div><div class="ms"><span class="badge badge-info">+100 leads antigos</span></div></div>
+    <div class="mc"><div class="ml">Retornaram</div><div class="mv">12</div><div class="ms"><span class="badge badge-bad">8% contatos</span></div></div>
+    <div class="mc"><div class="ml">Agendaram</div><div class="mv">9</div><div class="ms"><span class="badge badge-ok">16% leads</span></div></div>
+    <div class="mc"><div class="ml">Compareceram</div><div class="mv">3</div><div class="ms"><span class="badge badge-bad">33% agend.</span></div></div>
+    <div class="mc"><div class="ml">Faturamento</div><div class="mv">R$27k</div><div class="ms">1 × R$27k</div></div>
+  </div>
+  <hr class="d">
+  <div class="sl">Funil por canal</div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#1D4ED8;">Form. Meta · 37 leads · R$905</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#2563EB;">37</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:92%;background:#2563EB;">34</div></div><div class="fp">92%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:16%;background:#1D4ED8;">6</div></div><div class="fp">16%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:16%;background:#1E40AF;">6</div></div><div class="fp">16%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:8%;background:#1E3A8A;min-width:22px;">3</div></div><div class="fp">8%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:3%;background:#1e3a8a;min-width:22px;">1</div></div><div class="fp">3%</div></div>
+      <div class="cf"><span>CPL: <strong>R$24,46</strong></span><span>CP/Agend.: <strong>R$150,84</strong></span></div>
+    </div>
+    <div class="card"><div class="ct" style="color:#B45309;">Check-up · 11 leads · R$760</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">11</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:91%;background:#D97706;">10</div></div><div class="fp">91%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:36%;background:#B45309;">4</div></div><div class="fp">36%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:18%;background:#92400E;">2</div></div><div class="fp">18%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#78350F;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#451a03;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$69,10</strong></span><span>CP/Agend.: <strong>R$380,06</strong></span></div>
+    </div>
+  </div>
+  <div class="two">
+    <div class="card"><div class="ct" style="color:#C2410C;">Aplicação direta · 4 leads · R$2.395</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">4</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">4</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:25%;background:#C2410C;min-width:22px;">1</div></div><div class="fp">25%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:0%;background:#9A3412;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#7C2D12;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#431407;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$598,86</strong></span><span>CP/Agend.: <strong>—</strong></span></div>
+    </div>
+    <div class="card"><div class="ct" style="color:#BE185D;">Bio Instagram · 3 leads · R$882</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">3</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:67%;background:#DB2777;min-width:22px;">2</div></div><div class="fp">67%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:33%;background:#BE185D;min-width:22px;">1</div></div><div class="fp">33%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:33%;background:#9D174D;min-width:22px;">1</div></div><div class="fp">33%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:0%;background:#831843;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:0%;background:#500724;min-width:22px;">0</div></div><div class="fp">0%</div></div>
+      <div class="cf"><span>CPL: <strong>R$293,85</strong></span><span>CP/Agend.: <strong>R$881,56</strong></span></div>
+    </div>
+  </div>
+  <hr class="d">
+  <div class="sl">Insights</div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>+100 leads antigos do Lançamento contatados na S4:</strong> leads que chegaram em S2/S3 mas não tinham sido abordados. Nenhum retornou ou agendou — sinal de que leads de Lançamento esfriam rápido sem contato imediato.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Formulário Meta converteu:</strong> melhor CPL da S4 (R$24,46) e única venda da semana. Taxa de agendamento de 16% — a mais alta do Meta no mês.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Comparecimento caiu para 33%</strong> — pior desde a S1. Sem lançamento novo, o volume total de leads caiu 77% vs S3.</div></div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Aplicação direta sem conversão:</strong> R$2.395 investidos, 0 agendamentos na semana.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>ROAS de 5,5x:</strong> apesar do baixo volume, a única venda garantiu retorno saudável sobre o investimento menor da semana.</div></div>
+</div>
+
+<!-- COMPILADO -->
 <div class="pane" id="pane-comp">
-  <div class="section-label">Acumulado S1 + S2 + S3</div>
-  <div class="resumo-grid">
-    <div class="rv"><div class="rv-val">548</div><div class="rv-lbl">leads totais</div></div>
-    <div class="rv"><div class="rv-val">R$39,5k</div><div class="rv-lbl">investimento total</div></div>
-    <div class="rv"><div class="rv-val" style="color:var(--green);">R$216k</div><div class="rv-lbl">faturamento líquido</div></div>
-    <div class="rv"><div class="rv-val">5,5x</div><div class="rv-lbl">ROAS acumulado</div></div>
-    <div class="rv"><div class="rv-val">448%</div><div class="rv-lbl">ROI acumulado</div></div>
-    <div class="rv"><div class="rv-val">9 <span style="font-size:14px;color:var(--red);">-1</span></div><div class="rv-lbl">vendas brutas – cancel.</div></div>
+  <div class="sl">Acumulado S1+S2+S3+S4</div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Total de leads</div><div class="mv">603</div><div class="ms">S1:80·S2:225·S3:243·S4:55</div></div>
+    <div class="mc"><div class="ml">Investimento total</div><div class="mv">R$44,5k</div><div class="ms">R$44.510,05</div></div>
+    <div class="mc"><div class="ml">CPL médio acum.</div><div class="mv">R$74</div><div class="ms">↓ S1:R$85→S4:R$90</div></div>
+    <div class="mc"><div class="ml">Vendas líquidas</div><div class="mv">12</div><div class="ms">10 atribuíveis ao funil mkt + 2 fora <span style="color:var(--text3);font-size:10px;">(Drosendo, Marcus SMP)</span></div></div>
+    <div class="mc"><div class="ml">ROAS acum.</div><div class="mv">6,6x</div><div class="ms"><span class="badge badge-ok">ROI 561%</span></div></div>
+  </div>
+  <div class="mg5">
+    <div class="mc"><div class="ml">Contatados total</div><div class="mv">427</div><div class="ms">71% dos leads · +100 leads antigos S4</div></div>
+    <div class="mc"><div class="ml">Retornaram total</div><div class="mv">107</div><div class="ms">25% dos contatos</div></div>
+    <div class="mc"><div class="ml">Agendaram total</div><div class="mv">66</div><div class="ms">11% dos leads</div></div>
+    <div class="mc"><div class="ml">Compareceram total</div><div class="mv">33</div><div class="ms">50% dos agend.</div></div>
+    <div class="mc"><div class="ml">Faturamento líq.</div><div class="mv">R$294k</div><div class="ms">funil mkt · sem Drosendo/SMP</div></div>
   </div>
 
-  <hr class="divider">
-  <div class="section-label">Comparativo S1 → S2 → S3</div>
+  <hr class="d">
+  <div class="sl">Comparativo S1 → S2 → S3 → S4</div>
   <div class="card" style="margin-bottom:16px;">
-    <div class="ch"><span>S1</span><span>S2</span><span>S3</span><span>S2→S3</span></div>
-    <div class="cr"><div class="cl">Investimento</div><div class="cv s1">R$6.816</div><div class="cv s2">R$17.218</div><div class="cv s3">R$15.534</div><div class="cd ddg">-10%</div></div>
-    <div class="cr"><div class="cl">Leads recebidos</div><div class="cv s1">80</div><div class="cv s2">225</div><div class="cv s3">243</div><div class="cd dug">+8%</div></div>
-    <div class="cr"><div class="cl">CPL médio</div><div class="cv s1">R$85</div><div class="cv s2">R$76</div><div class="cv s3">R$64</div><div class="cd ddg">-16%</div></div>
-    <div class="cr"><div class="cl">% contatos / leads</div><div class="cv s1">85%</div><div class="cv s2">49%</div><div class="cv s3">41%</div><div class="cd dub">-8pp</div></div>
-    <div class="cr"><div class="cl">% retorno / contato</div><div class="cv s1">24%</div><div class="cv s2">39%</div><div class="cv s3">36%</div><div class="cd dub">-3pp</div></div>
-    <div class="cr"><div class="cl">% agendamento / lead</div><div class="cv s1">11%</div><div class="cv s2">8%</div><div class="cv s3">12%</div><div class="cd dug">+4pp</div></div>
-    <div class="cr"><div class="cl">% comparecimento</div><div class="cv s1">22%</div><div class="cv s2">53%</div><div class="cv s3">62%</div><div class="cd dug">+9pp</div></div>
-    <div class="cr"><div class="cl">Vendas líquidas</div><div class="cv s1">2</div><div class="cv s2">4</div><div class="cv s3">2</div><div class="cd dub">-2</div></div>
-    <div class="cr"><div class="cl">Faturamento</div><div class="cv s1">R$54k</div><div class="cv s2">R$108k</div><div class="cv s3">R$54k</div><div class="cd dub">-50%</div></div>
-    <div class="cr"><div class="cl">ROAS</div><div class="cv s1">7,9x</div><div class="cv s2">6,3x</div><div class="cv s3">3,5x</div><div class="cd ddb">-2,8x</div></div>
-    <div class="cr"><div class="cl">ROI</div><div class="cv s1">692%</div><div class="cv s2">527%</div><div class="cv s3">248%</div><div class="cd ddb">-279pp</div></div>
+    <div class="ch"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S3→S4</span></div>
+    <div class="cr"><div class="cl">Investimento</div><div class="cv s1">R$6.816</div><div class="cv s2">R$17.218</div><div class="cv s3">R$15.534</div><div class="cv s4">R$4.942</div><div class="cd ddg">-68%</div></div>
+    <div class="cr"><div class="cl">Leads recebidos</div><div class="cv s1">80</div><div class="cv s2">225</div><div class="cv s3">243</div><div class="cv s4">55</div><div class="cd dub">-77%</div></div>
+    <div class="cr"><div class="cl">CPL médio</div><div class="cv s1">R$85</div><div class="cv s2">R$76</div><div class="cv s3">R$64</div><div class="cv s4">R$90</div><div class="cd dub">+41%</div></div>
+    <div class="cr"><div class="cl">Contatados</div><div class="cv s1">68</div><div class="cv s2">110</div><div class="cv s3">99</div><div class="cv s4">150</div><div class="cd dug">+51</div></div>
+    <div class="cr"><div class="cl">% retorno/contato</div><div class="cv s1">24%</div><div class="cv s2">39%</div><div class="cv s3">36%</div><div class="cv s4">8%</div><div class="cd dub">-28pp</div></div>
+    <div class="cr"><div class="cl">% agendamento/lead</div><div class="cv s1">11%</div><div class="cv s2">8%</div><div class="cv s3">12%</div><div class="cv s4">16%</div><div class="cd dug">+4pp</div></div>
+    <div class="cr"><div class="cl">% comparecimento</div><div class="cv s1">22%</div><div class="cv s2">53%</div><div class="cv s3">62%</div><div class="cv s4">33%</div><div class="cd dub">-29pp</div></div>
+    <div class="cr"><div class="cl">Vendas líq. (funil mkt)</div><div class="cv s1">2</div><div class="cv s2">4</div><div class="cv s3">3</div><div class="cv s4">2</div><div class="cd dub">-1</div></div>
+    <div class="cr"><div class="cl">Faturamento</div><div class="cv s1">R$54k</div><div class="cv s2">R$108k</div><div class="cv s3">R$54k</div><div class="cv s4">R$27k</div><div class="cd dub">-50%</div></div>
+    <div class="cr"><div class="cl">ROAS</div><div class="cv s1">7,9x</div><div class="cv s2">6,3x</div><div class="cv s3">3,5x</div><div class="cv s4">5,5x</div><div class="cd dug">+2x</div></div>
+    <div class="cr"><div class="cl">ROI</div><div class="cv s1">692%</div><div class="cv s2">527%</div><div class="cv s3">248%</div><div class="cv s4">447%</div><div class="cd dug">+199pp</div></div>
   </div>
 
-  <hr class="divider">
-  <div class="section-label">Evolução das métricas · gráficos</div>
-  <div class="two-col">
+  <hr class="d">
+  <div class="sl">Evolução das métricas · gráficos de linha</div>
+  <div class="two">
     <div class="card">
-      <div class="card-title">Investimento (R$k) e Leads</div>
-      <div class="legend"><div class="legend-item"><div class="legend-sq" style="background:#2563EB;"></div>S1</div><div class="legend-item"><div class="legend-sq" style="background:#16A34A;"></div>S2</div><div class="legend-item"><div class="legend-sq" style="background:#D97706;"></div>S3</div></div>
-      <div class="chart-wrap" style="height:180px;"><canvas id="cInvLeads"></canvas></div>
+      <div class="ct">Investimento (R$k) e Leads</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#2563EB;"></div>Investimento</div><div class="li"><div class="ls" style="background:#16A34A;"></div>Leads</div></div>
+      <div class="cw" style="height:180px;"><canvas id="cInvLeads"></canvas></div>
     </div>
     <div class="card">
-      <div class="card-title">CPL médio (R$)</div>
-      <div class="legend"><div class="legend-item"><div class="legend-sq" style="background:#2563EB;"></div>S1</div><div class="legend-item"><div class="legend-sq" style="background:#16A34A;"></div>S2</div><div class="legend-item"><div class="legend-sq" style="background:#D97706;"></div>S3</div></div>
-      <div class="chart-wrap" style="height:180px;"><canvas id="cCPL"></canvas></div>
+      <div class="ct">CPL médio (R$) por semana</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#D97706;"></div>CPL</div></div>
+      <div class="cw" style="height:180px;"><canvas id="cCPL"></canvas></div>
     </div>
   </div>
-  <div class="two-col">
+  <div class="two">
     <div class="card">
-      <div class="card-title">% Retorno · % Agendamento · % Comparecimento</div>
-      <div class="legend"><div class="legend-item"><div class="legend-sq" style="background:#2563EB;"></div>S1</div><div class="legend-item"><div class="legend-sq" style="background:#16A34A;"></div>S2</div><div class="legend-item"><div class="legend-sq" style="background:#D97706;"></div>S3</div></div>
-      <div class="chart-wrap" style="height:180px;"><canvas id="cPcts"></canvas></div>
+      <div class="ct">% Retorno · % Agendamento · % Comparecimento</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#2563EB;"></div>Retorno</div><div class="li"><div class="ls" style="background:#D97706;"></div>Agendamento</div><div class="li"><div class="ls" style="background:#16A34A;"></div>Comparecimento</div></div>
+      <div class="cw" style="height:180px;"><canvas id="cPcts"></canvas></div>
     </div>
     <div class="card">
-      <div class="card-title">Vendas líquidas e ROAS por semana</div>
-      <div class="legend"><div class="legend-item"><div class="legend-sq" style="background:#2563EB;"></div>S1</div><div class="legend-item"><div class="legend-sq" style="background:#16A34A;"></div>S2</div><div class="legend-item"><div class="legend-sq" style="background:#D97706;"></div>S3</div></div>
-      <div class="chart-wrap" style="height:180px;"><canvas id="cROAS"></canvas></div>
+      <div class="ct">Vendas líquidas e ROAS</div>
+      <div class="leg"><div class="li"><div class="ls" style="background:#7C3AED;"></div>Vendas</div><div class="li"><div class="ls" style="background:#DC2626;"></div>ROAS</div></div>
+      <div class="cw" style="height:180px;"><canvas id="cROAS"></canvas></div>
     </div>
   </div>
 
-  <hr class="divider">
-  <div class="section-label">Insights consolidados</div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Comparecimento em alta consistente:</strong> 22% → 53% → 62%. Melhor indicador de processo — mais leads estão aparecendo nas reuniões.</div></div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>CPL em queda consistente:</strong> R$85 → R$76 → R$64. Custo por lead melhorando a cada semana mesmo com volume crescendo.</div></div>
-  <div class="insight"><div class="dot dot-bad"></div><div><strong>ROAS em queda acelerada:</strong> 7,9x → 6,3x → 3,5x. Alto comparecimento (62%) não está convertendo em vendas suficientes. O gargalo migrou para o fechamento — oportunidade de melhoria no processo comercial.</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>Agendamento recuperado na S3:</strong> voltou a 12% (vs 8% na S2), puxado pelo Lançamento que multiplicou agendamentos por 3. Sinal positivo de funil.</div></div>
-  <div class="insight"><div class="dot dot-warn"></div><div><strong>Bio Instagram instável:</strong> S1 zero, S2 melhor canal, S3 caiu. Sem padrão definido — avaliar criativo e audiência semana a semana.</div></div>
-  <div class="insight"><div class="dot dot-ok"></div><div><strong>Formulário Meta se estabilizando:</strong> CPL caindo (R$22 → R$37 → R$29), volume voltando. Canal mais consistente do portfólio.</div></div>
+  <hr class="d">
+  <div class="sl">Funil por canal · acumulado S1+S2+S3+S4</div>
+  <div class="two" style="margin-bottom:12px;">
+    <div class="card"><div class="ct" style="color:#6D28D9;">Lançamento · 331 leads · R$20.056</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#7C3AED;">331</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:57%;background:#7C3AED;">189</div></div><div class="fp">57%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:10%;background:#6D28D9;">34</div></div><div class="fp">10%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:8%;background:#5B21B6;min-width:22px;">25</div></div><div class="fp">8%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:5%;background:#4C1D95;min-width:22px;">18</div></div><div class="fp">5%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:1%;background:#3B0764;min-width:22px;">3</div></div><div class="fp">1%</div></div>
+      <div class="cf"><span>CPL: <strong>R$60,59</strong></span><span>Vendas: <strong>3</strong></span><span style="color:var(--text3);">+100 contatos S4 sem retorno</span></div>
+    </div>
+    <div class="card"><div class="ct" style="color:#C2410C;">Aplicação direta · 65 leads · R$14.092</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#EA580C;">65</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:80%;background:#EA580C;">52</div></div><div class="fp">80%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:23%;background:#C2410C;">15</div></div><div class="fp">23%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:18%;background:#9A3412;">12</div></div><div class="fp">18%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:5%;background:#7C2D12;min-width:22px;">3</div></div><div class="fp">5%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:3%;background:#431407;min-width:22px;">2</div></div><div class="fp">3%</div></div>
+      <div class="cf"><span>CPL: <strong>R$216,80</strong></span><span>Vendas: <strong>2</strong></span></div>
+    </div>
+  </div>
+  <div class="three" style="margin-bottom:16px;">
+    <div class="card"><div class="ct" style="color:#1D4ED8;">Form. Meta · 139 leads · R$3.810</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#2563EB;">139</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:91%;background:#2563EB;">126</div></div><div class="fp">91%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:18%;background:#1D4ED8;">25</div></div><div class="fp">18%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:12%;background:#1E40AF;min-width:22px;">16</div></div><div class="fp">12%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:4%;background:#1E3A8A;min-width:22px;">5</div></div><div class="fp">4%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:1%;background:#1e3a8a;min-width:22px;">1</div></div><div class="fp">1%</div></div>
+      <div class="cf"><span>CPL: <strong>R$27,41</strong></span><span>Vendas: <strong>1</strong></span></div>
+    </div>
+    <div class="card"><div class="ct" style="color:#BE185D;">Bio Instagram · 31 leads · R$4.029</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#DB2777;">31</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:84%;background:#DB2777;">26</div></div><div class="fp">84%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:52%;background:#BE185D;">16</div></div><div class="fp">52%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:29%;background:#9D174D;">9</div></div><div class="fp">29%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:23%;background:#831843;">7</div></div><div class="fp">23%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:6%;background:#500724;min-width:22px;">2</div></div><div class="fp">6%</div></div>
+      <div class="cf"><span>CPL: <strong>R$130,01</strong></span><span>Vendas: <strong>2</strong></span></div>
+    </div>
+    <div class="card"><div class="ct" style="color:#B45309;">Check-up · 37 leads · R$2.522</div>
+      <div class="fr"><div class="fl">Leads</div><div class="fb"><div class="ff" style="width:100%;background:#D97706;">37</div></div><div class="fp">100%</div></div>
+      <div class="fr"><div class="fl">Contatados</div><div class="fb"><div class="ff" style="width:92%;background:#D97706;">34</div></div><div class="fp">92%</div></div>
+      <div class="fr"><div class="fl">Retornaram</div><div class="fb"><div class="ff" style="width:46%;background:#B45309;">17</div></div><div class="fp">46%</div></div>
+      <div class="fr"><div class="fl">Agendaram</div><div class="fb"><div class="ff" style="width:11%;background:#92400E;min-width:22px;">4</div></div><div class="fp">11%</div></div>
+      <div class="fr"><div class="fl">Compareceram</div><div class="fb"><div class="ff" style="width:3%;background:#78350F;min-width:22px;">1</div></div><div class="fp">3%</div></div>
+      <div class="fr"><div class="fl">Compraram</div><div class="fb"><div class="ff" style="width:3%;background:#451a03;min-width:22px;">1</div></div><div class="fp">3%</div></div>
+      <div class="cf"><span>CPL: <strong>R$68,16</strong></span><span>Vendas: <strong>1</strong></span></div>
+    </div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">Vendas por canal · acumulado S1+S2+S3+S4</div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="canal-header"><div>Canal</div><div style="text-align:center;">S1</div><div style="text-align:center;">S2</div><div style="text-align:center;">S3</div><div style="text-align:center;">S4</div><div style="text-align:center;">Total</div></div>
+    <div class="canal-row"><div>Lançamento</div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-ok">2</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">3</div></div>
+    <div class="canal-row"><div>Aplicação direta</div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">3</div></div>
+    <div class="canal-row"><div>Bio Instagram</div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2</div></div>
+    <div class="canal-row"><div>Formulário Meta</div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1</div></div>
+    <div class="canal-row"><div>Check-up</div><div style="text-align:center;"><span class="badge badge-ok">1</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1</div></div>
+    <div class="canal-row"><div>Social Selling</div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-purple">1</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1</div></div>
+    <div class="canal-row" style="border-top:1px solid var(--border);padding-top:12px;"><div style="font-weight:600;">Funil mkt (Mentoria)</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">4</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">3</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2</div><div style="text-align:center;font-weight:700;font-size:16px;font-family:'DM Mono',monospace;">11</div></div>
+    <div class="canal-row" style="opacity:0.7;border-top:1px solid var(--border);padding-top:12px;"><div>Lead antigo (Drosendo) <span style="font-size:10px;color:var(--text3);">fora funil mkt</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-info">1</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1</div></div>
+    <div class="canal-row" style="opacity:0.7;"><div>SMP · Marcus <span style="font-size:10px;color:var(--text3);">outro produto</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span style="color:var(--text3);">—</span></div><div style="text-align:center;"><span class="badge badge-purple">1</span></div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">1</div></div>
+    <div class="canal-row" style="border-top:1px solid var(--border);padding-top:12px;"><div style="font-weight:600;">Total geral</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">2</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">4</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">3</div><div style="text-align:center;font-weight:600;font-family:'DM Mono',monospace;">4</div><div style="text-align:center;font-weight:700;font-size:16px;font-family:'DM Mono',monospace;">13</div></div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">Insights consolidados</div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Formulário Meta é o canal mais consistente do mês:</strong> CPL caindo semana a semana (R$22→R$37→R$29→R$24) e a única venda na S4. Melhor custo e maior volume entre os canais recorrentes.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Lançamento e Aplicação direta empatados como maiores canais (3 vendas cada):</strong> Lançamento concentrado em S2-S3, Aplicação distribuída ao longo do mês.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>100 leads do Lançamento contatados tardiamente na S4:</strong> nenhum retornou. Lead de Lançamento esfria rápido — janela de contato eficaz parece ser de poucos dias após captura.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Comparecimento caiu na S4 (33%):</strong> interrompeu a tendência de alta (22%→53%→62%). Sem Lançamento, o volume menor pode ter afetado a qualidade do pipeline.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>2 vendas fora do funil de marketing:</strong> Drosendo (R$25k, lead antigo procurando o closer) e Marcus (R$6,8k, produto SMP). Sinais positivos de relacionamento e diversificação de oferta — não computados no ROAS.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>ROAS acumulado em 6,6x e ROI 561%:</strong> R$ 294k de faturamento atribuível ao funil sobre R$ 44,5k de investimento. Resultado sólido apesar da queda de S2 (6,3x) → S3 (3,5x). A retomada do Lançamento em maio pode reverter.</div></div>
 </div>
 
 <script>
 function showTab(id){
-  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['s1','s2','s3','comp'][i]===id));
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',['s1','s2','s3','s4','comp'][i]===id));
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+id));
   if(id==='comp'&&!window._c)buildCharts();
 }
 function buildCharts(){
   window._c=true;
-  const tc='#9E9C98',gc='rgba(0,0,0,0.06)';
-  const s1='#2563EB',s2='#16A34A',s3='#D97706';
-  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10}},grid:{color:gc}}}};
-  new Chart(document.getElementById('cInvLeads'),{type:'bar',data:{labels:['Investimento (R$k)','Leads'],datasets:[{label:'S1',data:[6.8,80],backgroundColor:s1,borderRadius:4},{label:'S2',data:[17.2,225],backgroundColor:s2,borderRadius:4},{label:'S3',data:[15.5,243],backgroundColor:s3,borderRadius:4}]},options:base});
-  new Chart(document.getElementById('cCPL'),{type:'bar',data:{labels:['S1','S2','S3'],datasets:[{label:'CPL',data:[85,76,64],backgroundColor:[s1,s2,s3],borderRadius:4}]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v},grid:{color:gc},min:40,max:100}}}});
-  new Chart(document.getElementById('cPcts'),{type:'bar',data:{labels:['% Retorno','% Agendamento','% Comparecimento'],datasets:[{label:'S1',data:[24,11,22],backgroundColor:s1,borderRadius:4},{label:'S2',data:[39,8,53],backgroundColor:s2,borderRadius:4},{label:'S3',data:[36,12,62],backgroundColor:s3,borderRadius:4}]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>v+'%'},grid:{color:gc}}}}});
-  new Chart(document.getElementById('cROAS'),{type:'bar',data:{labels:['Vendas líq.','ROAS (x)'],datasets:[{label:'S1',data:[2,7.9],backgroundColor:s1,borderRadius:4},{label:'S2',data:[4,6.3],backgroundColor:s2,borderRadius:4},{label:'S3',data:[2,3.5],backgroundColor:s3,borderRadius:4}]},options:base});
+  const tc='#9E9C98',gc='rgba(0,0,0,0.06)',labels=['S1','S2','S3','S4'];
+  const t=0.3,r=5;
+  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10}},grid:{color:gc}}}};
+
+  new Chart(document.getElementById('cInvLeads'),{type:'line',data:{labels,datasets:[
+    {label:'Inv',data:[6.8,17.2,15.5,4.9],borderColor:'#2563EB',backgroundColor:'rgba(37,99,235,0.07)',tension:t,fill:true,pointRadius:r,pointBackgroundColor:'#2563EB',yAxisID:'y'},
+    {label:'Leads',data:[80,225,243,55],borderColor:'#16A34A',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#16A34A',yAxisID:'y2'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v+'k'},grid:{color:gc},position:'left'},y2:{ticks:{color:tc,font:{size:10}},grid:{display:false},position:'right'}}}});
+
+  new Chart(document.getElementById('cCPL'),{type:'line',data:{labels,datasets:[
+    {label:'CPL',data:[85,76,64,90],borderColor:'#D97706',backgroundColor:'rgba(217,119,6,0.07)',tension:t,fill:true,pointRadius:r,pointBackgroundColor:'#D97706'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>'R$'+v},grid:{color:gc},min:40,max:110}}}});
+
+  new Chart(document.getElementById('cPcts'),{type:'line',data:{labels,datasets:[
+    {label:'Retorno',data:[24,39,36,8],borderColor:'#2563EB',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#2563EB'},
+    {label:'Agendamento',data:[11,8,12,16],borderColor:'#D97706',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#D97706'},
+    {label:'Comparecimento',data:[22,53,62,33],borderColor:'#16A34A',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#16A34A'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10},callback:v=>v+'%'},grid:{color:gc}}}}});
+
+  new Chart(document.getElementById('cROAS'),{type:'line',data:{labels,datasets:[
+    {label:'Vendas',data:[2,4,2,1],borderColor:'#7C3AED',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#7C3AED',yAxisID:'y'},
+    {label:'ROAS',data:[7.9,6.3,3.5,5.5],borderColor:'#DC2626',tension:t,fill:false,pointRadius:r,pointBackgroundColor:'#DC2626',yAxisID:'y2'}
+  ]},options:{...base,scales:{x:{ticks:{color:tc,font:{size:11}},grid:{color:gc}},y:{ticks:{color:tc,font:{size:10}},grid:{color:gc},position:'left'},y2:{ticks:{color:tc,font:{size:10},callback:v=>v+'x'},grid:{display:false},position:'right'}}}});
 }
 </script>
 </body>
