@@ -80,6 +80,7 @@
   <div class="tab" onclick="showTab('s4')">S4 · 25–30/04</div>
   <div class="tab" onclick="showTab('comp')">Compilado</div>
   <div class="tab" onclick="showTab('maio')">Plano Maio</div>
+  <div class="tab" onclick="showTab('acomp')">Acompanhamento Maio</div>
 </div>
 
 <!-- S1 -->
@@ -703,9 +704,312 @@
 </div>
 
 
+<!-- ACOMPANHAMENTO MAIO -->
+<div class="pane" id="pane-acomp">
+  <style>
+    .prog-wrap{margin-top:8px;}
+    .prog-bar{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;}
+    .prog-fill{height:100%;border-radius:3px;}
+    .prog-meta{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;color:var(--text3);margin-top:5px;font-family:'DM Mono',monospace;}
+    .prog-meta strong{color:var(--text);font-weight:600;}
+    .real-badge{display:inline-block;font-size:10px;background:var(--surface2);color:var(--text2);padding:2px 7px;border-radius:10px;margin-left:8px;font-family:'DM Mono',monospace;font-weight:500;letter-spacing:.02em;}
+    .real-tag{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:6px;display:block;}
+    .fnl{display:grid;grid-template-columns:1.4fr repeat(5,60px) 70px;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;}
+    .fnl-h{font-size:11px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+    .fnl-n{text-align:center;font-family:'DM Mono',monospace;font-weight:600;}
+    .fnl-pct{font-size:10px;color:var(--text3);text-align:right;font-family:'DM Mono',monospace;}
+  </style>
+
+  <div class="sl">Acompanhamento · marketing maio 2026</div>
+  <div style="background:var(--blue-bg);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--blue-text);margin-bottom:18px;">
+    <strong>Status até 09/05/2026 · 5 dias úteis decorridos de 20 totais (25% do mês).</strong> Cada bloco mostra a meta original do plano e o realizado até a data. Pace ideal proporcional aos dias úteis = 25% das metas mensais.
+  </div>
+
+  <!-- INVESTIMENTO TOTAL -->
+  <div class="card" style="margin-bottom:12px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;">
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Investimento</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+          <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;">R$6.885</div>
+          <div style="font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;">/ R$70k</div>
+        </div>
+        <div class="prog-wrap">
+          <div class="prog-bar"><div class="prog-fill" style="width:10%;background:var(--red-text);"></div></div>
+          <div class="prog-meta"><span><strong>10%</strong></span><span>pace 25% · -15</span></div>
+        </div>
+      </div>
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Leads pagos</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+          <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;">168</div>
+          <div style="font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;">/ 1.363</div>
+        </div>
+        <div class="prog-wrap">
+          <div class="prog-bar"><div class="prog-fill" style="width:12%;background:var(--red-text);"></div></div>
+          <div class="prog-meta"><span><strong>12%</strong></span><span>pace 25% · -13pp</span></div>
+        </div>
+      </div>
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">CPL médio</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+          <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">R$41</div>
+          <div style="font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;">/ R$51</div>
+        </div>
+        <div class="prog-meta" style="margin-top:8px;"><span style="color:var(--green-text);"><strong>-20%</strong></span><span>vs meta · ✓ favorável</span></div>
+      </div>
+      <div style="padding:12px 14px;text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Agendamentos gerados</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+          <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;">14</div>
+          <div style="font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;">/ 202</div>
+        </div>
+        <div class="prog-wrap">
+          <div class="prog-bar"><div class="prog-fill" style="width:7%;background:var(--red-text);"></div></div>
+          <div class="prog-meta"><span><strong>7%</strong></span><span>pace 25% · -18pp</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RETORNO FINANCEIRO -->
+  <div class="card" style="margin-bottom:18px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;">
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Receita gerada</div>
+        <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">R$54.000</div>
+        <div class="prog-meta" style="margin-top:8px;justify-content:center;"><span>2 vendas × R$27k</span></div>
+      </div>
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">ROI</div>
+        <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">+684%</div>
+        <div class="prog-meta" style="margin-top:8px;justify-content:center;"><span>(receita − invest) / invest</span></div>
+      </div>
+      <div style="padding:12px 14px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">ROAS</div>
+        <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">7,8x</div>
+        <div class="prog-meta" style="margin-top:8px;justify-content:center;"><span>cada R$1 → R$7,80 receita</span></div>
+      </div>
+      <div style="padding:12px 14px;text-align:center;">
+        <div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Custo por agendamento</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+          <div style="font-size:24px;font-weight:600;font-family:'DM Mono',monospace;line-height:1;color:var(--green-text);">R$492</div>
+          <div style="font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;">vs R$347 meta</div>
+        </div>
+        <div class="prog-meta" style="margin-top:8px;justify-content:center;"><span style="color:var(--amber-text);">+42% acima do alvo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPOSIÇÃO POR CANAL · REALIZADO -->
+  <div class="sl">Composição por canal · realizado vs meta</div>
+  <div class="card" style="margin-bottom:18px;">
+    <div style="overflow-x:auto;">
+    <div style="min-width:1100px;">
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:10px 0;border-bottom:1px solid var(--border);font-size:10px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.04em;">
+      <div>Canal</div>
+      <div style="text-align:center;">Invest. real/meta</div>
+      <div style="text-align:center;">CPL real</div>
+      <div style="text-align:center;">Leads real/meta</div>
+      <div style="text-align:center;">Agend real/meta</div>
+      <div style="text-align:center;">Vendas</div>
+      <div style="text-align:center;">Receita</div>
+      <div style="text-align:center;">ROAS</div>
+      <div style="text-align:center;">C/Agend</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div><strong>Lançamentos</strong></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">R$3,0k<span style="color:var(--text3);font-size:10px;"> /48k</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">R$37</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">83<span style="color:var(--text3);font-size:10px;"> /800</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">8<span style="color:var(--text3);font-size:10px;"> /88</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);">0</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">R$0</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);">0,0x</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);font-size:12px;">R$379</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div><strong>Formulário Meta</strong></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">R$1,9k<span style="color:var(--text3);font-size:10px;"> /12k</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--amber-text);">R$29</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">65<span style="color:var(--text3);font-size:10px;"> /444</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">2<span style="color:var(--text3);font-size:10px;"> /58</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">1</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">R$27k</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);font-weight:600;">14,2x</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);font-size:12px;">R$948</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div><strong>Check-up</strong></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">R$1,0k<span style="color:var(--text3);font-size:10px;"> /6k</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--amber-text);">R$71</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">14<span style="color:var(--text3);font-size:10px;"> /88</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">2<span style="color:var(--text3);font-size:10px;"> /11</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">1</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">R$27k</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);font-weight:600;">27,1x</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--amber-text);font-size:12px;">R$499</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div><strong>Instagram</strong></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">R$1,0k<span style="color:var(--text3);font-size:10px;"> /4k</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);">R$160</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">6<span style="color:var(--text3);font-size:10px;"> /31</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;font-size:12px;">2<span style="color:var(--text3);font-size:10px;"> /9</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);">0</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">R$0</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--red-text);">0,0x</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--amber-text);font-size:12px;">R$481</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;">
+      <div style="color:var(--text2);"><strong>Indicações (Luiz)</strong></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">R$0</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">—</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);font-size:12px;">?<span style="color:var(--text3);font-size:10px;"> /90</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);font-size:12px;">?<span style="color:var(--text3);font-size:10px;"> /36</span></div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">?</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">?</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--text3);">∞</div>
+      <div style="text-align:center;font-family:'DM Mono',monospace;color:var(--green-text);">R$0</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.2fr 95px 70px 90px 80px 70px 75px 65px 60px;gap:6px;padding:11px 0;border-top:2px solid var(--border);font-size:14px;align-items:center;">
+      <div style="font-weight:600;">Total</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;font-size:12px;">R$6,9k<span style="color:var(--text3);font-size:10px;font-weight:500;"> /70k</span></div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;color:var(--green-text);">R$41</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;font-size:12px;">168<span style="color:var(--text3);font-size:10px;font-weight:500;"> /1.363</span></div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;font-size:12px;">14<span style="color:var(--text3);font-size:10px;font-weight:500;"> /202</span></div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;color:var(--green-text);">2</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;color:var(--green-text);">R$54k</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;color:var(--green-text);">7,8x</div>
+      <div style="text-align:center;font-weight:700;font-family:'DM Mono',monospace;color:var(--amber-text);font-size:12px;">R$492</div>
+    </div>
+    </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:var(--surface2);border-radius:6px;font-size:11px;color:var(--text3);line-height:1.6;">
+      <strong style="color:var(--text2);">Receita:</strong> calculada com ticket médio de R$27.000 por venda · <strong style="color:var(--text2);">ROAS:</strong> receita / investimento · <strong style="color:var(--text2);">C/Agend:</strong> custo por agendamento (meta no plano: R$347) · Receita e ROAS são parciais — várias reuniões agendadas ainda vão acontecer.
+    </div>
+  </div>
+
+  <!-- FUNIL COMPLETO POR CANAL -->
+  <div class="sl">Funil completo por canal · até 09/05</div>
+  <div class="card" style="margin-bottom:18px;">
+    <style>
+      .fnl2{display:grid;grid-template-columns:1.1fr 70px repeat(5,1fr);gap:6px;padding:11px 0;border-bottom:1px solid var(--border);font-size:13px;align-items:center;}
+      .fnl2-h{font-size:10px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
+      .fnl2-c{text-align:center;}
+      .fnl2-n{font-family:'DM Mono',monospace;font-weight:600;font-size:15px;line-height:1.1;}
+      .fnl2-tx{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:2px;}
+    </style>
+    <div class="fnl2 fnl2-h" style="font-size:10px;">
+      <div>Canal</div>
+      <div class="fnl2-c">Leads</div>
+      <div class="fnl2-c">Contatados</div>
+      <div class="fnl2-c">Retornaram</div>
+      <div class="fnl2-c">Agendaram</div>
+      <div class="fnl2-c">Compareceram</div>
+      <div class="fnl2-c">Compraram</div>
+    </div>
+
+    <div class="fnl2">
+      <div><strong>Lançamento</strong></div>
+      <div class="fnl2-c"><div class="fnl2-n">83</div><div class="fnl2-tx">100%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">70</div><div class="fnl2-tx" style="color:var(--amber-text);">84%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">30</div><div class="fnl2-tx">36%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">8<sup style="font-size:9px;color:var(--text3);font-weight:400;">*</sup></div><div class="fnl2-tx">10%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">3</div><div class="fnl2-tx">4%<sup style="font-size:8px;">†</sup></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="color:var(--red-text);">0</div><div class="fnl2-tx">0%</div></div>
+    </div>
+
+    <div class="fnl2">
+      <div><strong>Formulário Meta</strong></div>
+      <div class="fnl2-c"><div class="fnl2-n">65</div><div class="fnl2-tx">100%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">64</div><div class="fnl2-tx" style="color:var(--green-text);">98%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">11</div><div class="fnl2-tx" style="color:var(--red-text);">17%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">2</div><div class="fnl2-tx" style="color:var(--red-text);">3%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">2</div><div class="fnl2-tx">3%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="color:var(--green-text);">1</div><div class="fnl2-tx">2%</div></div>
+    </div>
+
+    <div class="fnl2">
+      <div><strong>Check-up</strong></div>
+      <div class="fnl2-c"><div class="fnl2-n">14</div><div class="fnl2-tx">100%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">12</div><div class="fnl2-tx" style="color:var(--amber-text);">86%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">5</div><div class="fnl2-tx">36%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">2</div><div class="fnl2-tx">14%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">1</div><div class="fnl2-tx">7%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="color:var(--green-text);">1</div><div class="fnl2-tx" style="color:var(--green-text);">7%</div></div>
+    </div>
+
+    <div class="fnl2">
+      <div><strong>Instagram</strong></div>
+      <div class="fnl2-c"><div class="fnl2-n">6</div><div class="fnl2-tx">100%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">6</div><div class="fnl2-tx" style="color:var(--green-text);">100%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">3</div><div class="fnl2-tx" style="color:var(--green-text);">50%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">2</div><div class="fnl2-tx" style="color:var(--green-text);">33%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">1</div><div class="fnl2-tx">17%</div></div>
+      <div class="fnl2-c"><div class="fnl2-n">0</div><div class="fnl2-tx">0%</div></div>
+    </div>
+
+    <div class="fnl2" style="border-top:2px solid var(--border);border-bottom:none;padding-top:13px;">
+      <div style="font-weight:600;">Total</div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">168</div><div class="fnl2-tx"><strong>100%</strong></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">152</div><div class="fnl2-tx"><strong>90%</strong></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">49</div><div class="fnl2-tx"><strong>29%</strong></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">14</div><div class="fnl2-tx"><strong>8%</strong></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">7</div><div class="fnl2-tx"><strong>4%<sup style="font-size:8px;">†</sup></strong></div></div>
+      <div class="fnl2-c"><div class="fnl2-n" style="font-size:17px;">2</div><div class="fnl2-tx"><strong>1%</strong></div></div>
+    </div>
+
+    <div style="margin-top:12px;padding:8px 12px;background:var(--surface2);border-radius:6px;font-size:11px;color:var(--text3);line-height:1.6;">
+      Taxas calculadas sobre o total de leads de cada canal (não sobre a etapa anterior).<br>
+      <strong style="color:var(--text2);">*</strong> 4 dos 8 agendamentos do Lançamento são para esta semana — reuniões ainda não aconteceram.<br>
+      <strong style="color:var(--text2);">†</strong> Comparecimento parcial — 4 reuniões do Lançamento pendentes. <strong style="color:var(--text2);">No-show real: 30%</strong> (3 de 10 reuniões já realizadas) — exatamente no alvo do plano.
+    </div>
+  </div>
+
+  <!-- DISCREPÂNCIA COM COMERCIAL -->
+  <div class="card" style="margin-bottom:18px;background:#FAFAF9;">
+    <span class="real-tag">Reconciliação com comercial</span>
+    <div style="font-size:13px;color:var(--text2);line-height:1.7;">
+      Marketing registrou <strong>14 agendamentos</strong> gerados de canais pagos (10 já realizados + 4 futuros).<br>
+      Comercial registrou <strong>16 agendamentos</strong> totais (Aline 12 + Vanessa 4 + Otávio 0).<br>
+      <strong style="color:var(--text2);">Diferença de 2:</strong> agendamentos que não vieram dos canais pagos rastreados — provavelmente indicações ou follow-up de bases anteriores. Verificar com Aline e Vanessa de onde vieram esses 2.<br>
+      <strong style="color:var(--green-text);">No-show alinhado:</strong> 30% real (3 de 10 reuniões já realizadas) bate exatamente com o alvo do plano. Diferença com comercial (11%) tem origem na definição: comercial conta toda a agenda da semana (incluindo reuniões agendadas em semanas anteriores), marketing conta apenas agendamentos novos da semana.
+    </div>
+  </div>
+
+  <hr class="d">
+  <div class="sl">Leitura · até 09/05 (5 dias úteis)</div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>ROAS de 7,8x e ROI de +684%:</strong> R$6,9k investidos geraram R$54k de receita (2 vendas × R$27k). Check-up lidera com ROAS 27,1x (R$1k → R$27k) e Formulário Meta vem em 14,2x (R$1,9k → R$27k). Lançamento e Instagram ainda não converteram, mas têm reuniões pendentes que podem mudar o quadro.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Custo por agendamento em R$492 (+42% vs meta R$347):</strong> acima do alvo, mas dentro de margem razoável pra fase inicial do mês. Form Meta puxa pra cima com R$948 por agendamento (gargalo de tx). Lançamento está em R$379 (próximo da meta) e tende a melhorar com o CPL 19/05 trazendo escala.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>CPL médio em R$41 (-20% vs meta R$51):</strong> excelente sinal de eficiência. Lançamento está em R$37 (vs meta R$60 — bem abaixo) e Form Meta em R$29 (próximo da meta de R$27). Custos pagos sob controle.</div></div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Formulário Meta: tx agend em 3,1% (vs meta 13%) — gargalo crítico:</strong> 64 contatados, 11 retornaram (17% retorno — baixo), só 2 agendaram (18% dos retornos). Algo está travando a passagem contatado→retornado e retornado→agendado. Hipóteses: (a) qualidade dos leads piorou, (b) Aline com tempo limitado, (c) abordagem inicial não está engajando. Form Meta representa 30% do volume de leads previsto — se a tx ficar nesse patamar, perde-se ~50 agendamentos do mês.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Lançamento: 8 agendamentos de 83 leads (9,6% vs meta 11%):</strong> próximo da meta, mas com o CPL 19/05 ainda não rodado (peso de 50% do canal). 30 retornaram dos 70 contatados (43% retorno — bom), mas só 8 agendaram. Pode ser timing — leads precisam de mais contatos pra agendar.</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>Check-up e Instagram acima da meta:</strong> Check-up 14,3% (meta 13%), Instagram 33% (meta 29%). Canais menores mas com tx melhores. Vale entender o que está funcionando aí — Instagram fechou 67% de retorno→agendamento (vs 40% nos outros canais).</div></div>
+  <div class="ins"><div class="dot dot-ok"></div><div><strong>No-show real em 30% (3 de 10 reuniões já realizadas) — exatamente no alvo:</strong> resultado bate com a meta do plano. Importante: dos 14 agendamentos totais, 4 do Lançamento são para esta semana e ainda não aconteceram (não entram no cálculo). Comparecimento de 7 de 10 reuniões que já passaram.</div></div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Conversão final lead pago → venda: 1,3% (2/168) — abaixo do necessário:</strong> Para 30 vendas em 1.453 leads totais, a tx alvo é ~2%. Estamos abaixo, mas com base pequena e funil incompleto (reuniões agendadas que ainda vão acontecer).</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Indicações sem dados consolidados:</strong> meta 90 leads no mês, pace ideal 22 leads na 1ª semana. Pendência de receber report do Luiz pra fechar o quadro.</div></div>
+
+  <hr class="d">
+  <div class="sl">Ações imediatas · próximos 5 dias úteis</div>
+  <div class="ins"><div class="dot dot-bad"></div><div><strong>Investigar gargalo Formulário Meta:</strong> 64 contatados → 11 retornaram (17%) → 2 agendaram. Reunir Aline pra entender o que está acontecendo entre contato e retorno (ligação, WhatsApp, e-mail?) e entre retorno e agendamento. Testar nova abordagem em 20 leads esta semana.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Padronizar definição de "agendamento" entre comercial e marketing:</strong> hoje marketing conta agendamentos novos da semana, comercial conta toda a agenda (incluindo reuniões agendadas antes). Padronizar pra próxima atualização — facilita reconciliação semanal.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Acelerar Lançamento CPL 19/05:</strong> 7 dias úteis até o lançamento. Hora de finalizar criações, segmentação e estrutura de captura. Este evento concentra 56% do investimento ainda não executado.</div></div>
+  <div class="ins"><div class="dot dot-warn"></div><div><strong>Aproveitar Instagram + Check-up:</strong> tx acima da meta — vale aumentar investimento marginal? Instagram com R$1k investido de R$4k orçados, e está convertendo. Talvez acelerar uns R$500-1k a mais aí pode trazer agendamentos extras a custo competitivo.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Cobrar dados de Indicações:</strong> alinhar com Luiz formato e cadência semanal de reporting. Sem isso, não é possível medir 17% da meta de agendamentos do mês.</div></div>
+  <div class="ins"><div class="dot dot-info"></div><div><strong>Próxima atualização:</strong> revisar este painel toda 2ª-feira pela manhã. Pós-CPL 19/05, focar análise no impacto da campanha grande.</div></div>
+</div>
+
+
 <script>
 function showTab(id){
-  const tabs=['s1','s2','s3','s4','comp','maio'];
+  const tabs=['s1','s2','s3','s4','comp','maio','acomp'];
   document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',tabs[i]===id));
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+id));
   if(id==='comp'&&!window._c)buildCharts();
